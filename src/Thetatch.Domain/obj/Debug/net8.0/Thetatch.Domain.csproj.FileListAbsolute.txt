@@ -1,0 +1,15 @@
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\bin\Debug\net8.0\Thetatch.Domain.deps.json
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\bin\Debug\net8.0\Thetatch.Domain.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\bin\Debug\net8.0\Thetatch.Domain.pdb
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\bin\Debug\net8.0\Thetatch.SharedKernel.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\bin\Debug\net8.0\Thetatch.SharedKernel.pdb
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\Thetatch.Domain.csproj.AssemblyReference.cache
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\Thetatch.Domain.GeneratedMSBuildEditorConfig.editorconfig
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\Thetatch.Domain.AssemblyInfoInputs.cache
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\Thetatch.Domain.AssemblyInfo.cs
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\Thetatch.Domain.csproj.CoreCompileInputs.cache
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\Thetatch.0C23232F.Up2Date
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\Thetatch.Domain.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\refint\Thetatch.Domain.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\Thetatch.Domain.pdb
+W:\Thetatch\Work\E-commerce\src\Thetatch.Domain\obj\Debug\net8.0\ref\Thetatch.Domain.dll

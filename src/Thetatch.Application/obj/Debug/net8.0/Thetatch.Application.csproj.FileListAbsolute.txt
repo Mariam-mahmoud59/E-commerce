@@ -1,0 +1,17 @@
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.Application.csproj.AssemblyReference.cache
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.Application.GeneratedMSBuildEditorConfig.editorconfig
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.Application.AssemblyInfoInputs.cache
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.Application.AssemblyInfo.cs
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.Application.csproj.CoreCompileInputs.cache
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\bin\Debug\net8.0\Thetatch.Application.deps.json
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\bin\Debug\net8.0\Thetatch.Application.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\bin\Debug\net8.0\Thetatch.Application.pdb
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\bin\Debug\net8.0\Thetatch.Domain.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\bin\Debug\net8.0\Thetatch.SharedKernel.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\bin\Debug\net8.0\Thetatch.Domain.pdb
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\bin\Debug\net8.0\Thetatch.SharedKernel.pdb
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.24BDB675.Up2Date
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.Application.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\refint\Thetatch.Application.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.Application.pdb
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\ref\Thetatch.Application.dll

@@ -1,0 +1,11 @@
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\bin\Debug\net8.0\Thetatch.SharedKernel.deps.json
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\bin\Debug\net8.0\Thetatch.SharedKernel.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\bin\Debug\net8.0\Thetatch.SharedKernel.pdb
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\Thetatch.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\Thetatch.SharedKernel.AssemblyInfoInputs.cache
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\Thetatch.SharedKernel.AssemblyInfo.cs
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\Thetatch.SharedKernel.csproj.CoreCompileInputs.cache
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\Thetatch.SharedKernel.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\refint\Thetatch.SharedKernel.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\Thetatch.SharedKernel.pdb
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\ref\Thetatch.SharedKernel.dll

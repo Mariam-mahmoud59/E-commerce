@@ -1,0 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Thetatch.Domain.Entities;
+
+namespace Thetatch.Application.Interfaces;
+
+public interface IApplicationDbContext
+{
+    DbSet<Product> Products { get; }
+    DbSet<ProductVariant> ProductVariants { get; }
+    DbSet<Category> Categories { get; }
+    DbSet<ProductImage> ProductImages { get; }
+
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+}

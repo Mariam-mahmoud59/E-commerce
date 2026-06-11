@@ -1,0 +1,89 @@
+{
+  "brand": "هورايزونز",
+  "tagline": "الحرفة. التجارة. الثقافة.",
+  "langToggle": "English",
+  "scroll": "مرر",
+  "collections": "✦ المجموعات",
+  "copyright": "© ٢٠٢٦ هورايزونز للتجارة. جميع الحقوق محفوظة.",
+  "satisfaction": "رضا العملاء",
+  "countries": "دولة",
+  "artisans": "حرفي",
+  "continue": "متابعة",
+
+  "nav": {
+    "home": "الرئيسية",
+    "shop": "المتجر",
+    "checkout": "الدفع",
+    "dashboard": "لوحة التحكم"
+  },
+
+  "hero": {
+    "titleLine1": "ارتقِ بكل",
+    "titleLine2": "عملية شراء",
+    "subtitle": "مجموعات منتقاة. حرفية راقية. تُوصَّل إلى بابك.",
+    "shopNow": "تسوق الآن",
+    "exploreAll": "استكشف الكل",
+    "product0": "سيراميك حرفي",
+    "product1": "منسوجات يدوية",
+    "product2": "مجوهرات مصنوعة يدوياً"
+  },
+
+  "product": {
+    "featured": "المجموعات المميزة",
+    "addToCart": "أضف للسلة",
+    "quickView": "عرض سريع",
+    "added": "تمت الإضافة!",
+    "inStock": "متوفر",
+    "reviews": "تقييمات",
+    "qty": "الكمية",
+    "deliveryTime": "التسليم: ٣–٥ أيام عمل",
+    "back": "رجوع →",
+    "notFound": "المنتج غير موجود",
+    "notFoundDesc": "المنتج الذي تبحث عنه غير موجود.",
+    "goToShop": "الذهاب للمتجر"
+  },
+
+  "checkout": {
+    "title": "الدفع",
+    "orderSummary": "ملخص الطلب",
+    "placeOrder": "تأكيد الطلب",
+    "processing": "جاري المعالجة…",
+    "orderPlaced": "تم الطلب! ✓",
+    "subtotal": "المجموع الفرعي",
+    "shipping": "الشحن",
+    "total": "الإجمالي",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "address": "عنوان الشارع",
+    "city": "المدينة",
+    "payment": "رقم البطاقة",
+    "cartEmpty": "سلة التسوق فارغة",
+    "secure": "دفع آمن",
+    "step1": "التفاصيل",
+    "step2": "الشحن",
+    "step3": "الدفع",
+    "orderSuccess": "منتجاتك الحرفية في طريقها إليك."
+  },
+
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "totalRevenue": "إجمالي الإيرادات",
+    "totalOrders": "إجمالي الطلبات",
+    "totalOrders_stat": "طلب",
+    "activeUsers": "المستخدمون النشطون",
+    "pendingOrders": "الطلبات المعلقة",
+    "recentOrders": "الطلبات الأخيرة",
+    "status": "الحالة",
+    "customer": "العميل",
+    "amount": "المبلغ",
+    "pending": "معلق",
+    "shipped": "تم الشحن",
+    "delivered": "تم التسليم",
+    "revenue": "نظرة عامة على الإيرادات"
+  },
+
+  "cart": {
+    "remove": "إزالة"
+  }
+}

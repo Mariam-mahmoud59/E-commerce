@@ -1,0 +1,88 @@
+{
+  "brand": "HORIZONS",
+  "tagline": "Craft. Commerce. Culture.",
+  "langToggle": "العربية",
+  "scroll": "SCROLL",
+  "collections": "COLLECTIONS",
+  "copyright": "© 2026 Horizons Commerce. All rights reserved.",
+  "satisfaction": "Satisfaction",
+  "countries": "Countries",
+  "artisans": "Artisans",
+  "continue": "Continue",
+
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "checkout": "Checkout",
+    "dashboard": "Dashboard"
+  },
+
+  "hero": {
+    "titleLine1": "Elevate Your",
+    "titleLine2": "Every Purchase",
+    "subtitle": "Curated collections. Premium craftsmanship. Delivered to your door.",
+    "shopNow": "Shop Now",
+    "exploreAll": "Explore All",
+    "product0": "Artisan Ceramics",
+    "product1": "Woven Textiles",
+    "product2": "Handcrafted Jewelry"
+  },
+
+  "product": {
+    "featured": "Featured Collections",
+    "addToCart": "Add to Cart",
+    "quickView": "Quick View",
+    "added": "Added!",
+    "inStock": "In Stock",
+    "reviews": "reviews",
+    "qty": "Qty",
+    "deliveryTime": "Delivery: 3–5 business days",
+    "back": "← Back",
+    "notFound": "Product not found",
+    "notFoundDesc": "The product you're looking for doesn't exist.",
+    "goToShop": "Go to Shop"
+  },
+
+  "checkout": {
+    "title": "Checkout",
+    "orderSummary": "Order Summary",
+    "placeOrder": "Place Order",
+    "processing": "Processing…",
+    "orderPlaced": "Order Placed! ✓",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "address": "Street Address",
+    "city": "City",
+    "payment": "Card Number",
+    "cartEmpty": "Your cart is empty",
+    "secure": "Secure Checkout",
+    "step1": "Details",
+    "step2": "Shipping",
+    "step3": "Payment",
+    "orderSuccess": "Your artisan goods are on their way."
+  },
+
+  "dashboard": {
+    "title": "Dashboard",
+    "totalRevenue": "Total Revenue",
+    "totalOrders": "Total Orders",
+    "activeUsers": "Active Users",
+    "pendingOrders": "Pending Orders",
+    "recentOrders": "Recent Orders",
+    "status": "Status",
+    "customer": "Customer",
+    "amount": "Amount",
+    "pending": "Pending",
+    "shipped": "Shipped",
+    "delivered": "Delivered",
+    "revenue": "Revenue Overview"
+  },
+
+  "cart": {
+    "remove": "Remove"
+  }
+}

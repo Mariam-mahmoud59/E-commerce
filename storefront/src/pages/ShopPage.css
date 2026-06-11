@@ -1,0 +1,40 @@
+/* ─── SHOP PAGE ─────────────────────────────────────────────────────── */
+.shop { padding-top: 100px; min-height: 100vh; }
+.shop__inner {
+  padding: 40px clamp(16px, 6vw, 80px);
+  max-width: 1280px; margin: 0 auto;
+}
+.shop__title {
+  font-family: var(--font-heading); font-weight: 800;
+  font-size: clamp(28px, 4vw, 52px); color: var(--cream); margin-bottom: 8px;
+}
+.shop__subtitle {
+  font-family: var(--font-body); color: rgba(255, 253, 208, 0.6); margin-bottom: 36px;
+}
+
+/* ─── CATEGORY FILTER ──────────────────────────────────────────────── */
+.shop__filters {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 48px;
+}
+.shop__filter-btn {
+  background: var(--glass); border: 1px solid var(--glass-border);
+  border-radius: 20px; padding: 8px 20px; cursor: pointer;
+  font-family: var(--font-body); font-weight: 500; font-size: 13px;
+  color: var(--cream); backdrop-filter: blur(8px); transition: all 0.22s ease;
+}
+.shop__filter-btn:hover { background: rgba(255, 253, 208, 0.18); }
+.shop__filter-btn--active {
+  background: var(--grad-main); border-color: transparent;
+}
+
+.shop__grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px;
+}
+
+/* ─── RESPONSIVE ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .shop__inner { padding: 24px 16px; }
+  .shop__filters { gap: 8px; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
+  .shop__filter-btn { white-space: nowrap; flex-shrink: 0; }
+  .shop__grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+}
