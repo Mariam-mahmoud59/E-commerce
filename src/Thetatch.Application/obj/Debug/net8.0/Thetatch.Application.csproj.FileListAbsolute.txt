@@ -15,3 +15,4 @@ W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.A
 W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\refint\Thetatch.Application.dll
 W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.Application.pdb
 W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\ref\Thetatch.Application.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Application\obj\Debug\net8.0\Thetatch.Application.sourcelink.json

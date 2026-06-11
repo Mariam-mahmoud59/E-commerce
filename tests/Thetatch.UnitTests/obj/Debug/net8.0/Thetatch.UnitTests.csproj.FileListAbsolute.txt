@@ -97,3 +97,4 @@ W:\Thetatch\Work\E-commerce\tests\Thetatch.UnitTests\obj\Debug\net8.0\refint\The
 W:\Thetatch\Work\E-commerce\tests\Thetatch.UnitTests\obj\Debug\net8.0\Thetatch.UnitTests.pdb
 W:\Thetatch\Work\E-commerce\tests\Thetatch.UnitTests\obj\Debug\net8.0\Thetatch.UnitTests.genruntimeconfig.cache
 W:\Thetatch\Work\E-commerce\tests\Thetatch.UnitTests\obj\Debug\net8.0\ref\Thetatch.UnitTests.dll
+W:\Thetatch\Work\E-commerce\tests\Thetatch.UnitTests\obj\Debug\net8.0\Thetatch.UnitTests.sourcelink.json

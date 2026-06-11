@@ -17,3 +17,4 @@ W:\Thetatch\Work\E-commerce\src\Thetatch.Infrastructure\obj\Debug\net8.0\Thetatc
 W:\Thetatch\Work\E-commerce\src\Thetatch.Infrastructure\obj\Debug\net8.0\refint\Thetatch.Infrastructure.dll
 W:\Thetatch\Work\E-commerce\src\Thetatch.Infrastructure\obj\Debug\net8.0\Thetatch.Infrastructure.pdb
 W:\Thetatch\Work\E-commerce\src\Thetatch.Infrastructure\obj\Debug\net8.0\ref\Thetatch.Infrastructure.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.Infrastructure\obj\Debug\net8.0\Thetatch.Infrastructure.sourcelink.json

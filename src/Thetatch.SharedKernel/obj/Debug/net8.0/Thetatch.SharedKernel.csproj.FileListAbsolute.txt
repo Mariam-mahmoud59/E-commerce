@@ -9,3 +9,4 @@ W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\Thetatch.
 W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\refint\Thetatch.SharedKernel.dll
 W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\Thetatch.SharedKernel.pdb
 W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\ref\Thetatch.SharedKernel.dll
+W:\Thetatch\Work\E-commerce\src\Thetatch.SharedKernel\obj\Debug\net8.0\Thetatch.SharedKernel.sourcelink.json
