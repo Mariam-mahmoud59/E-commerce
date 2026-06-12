@@ -59,7 +59,7 @@ async function fetchApiWithCredentials<T>(endpoint: string, options: RequestInit
 
   // Handle empty responses
   const text = await response.text();
-  return text ? JSON.parse(text) : {};
+  return text ? JSON.parse(text) : ({} as T);
 }
 
 
