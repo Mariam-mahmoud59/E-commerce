@@ -2,20 +2,21 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../../hooks/useCart';
+import { useAuth } from '../../hooks/AuthContext';
 import './Navbar.css';
 
-const NAV_LINKS = [
+const COMMON_LINKS = [
   { path: '/', key: 'nav.home' },
   { path: '/shop', key: 'nav.shop' },
   { path: '/checkout', key: 'nav.checkout' },
-  { path: '/dashboard', key: 'nav.dashboard' },
-] as const;
+];
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const { totalItems } = useCart();
+  const { isAuthenticated, logout, user } = useAuth();
 
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -26,7 +27,6 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
-  // Close drawer on route change
   useEffect(() => {
     setDrawerOpen(false);
   }, [location.pathname]);
@@ -40,8 +40,23 @@ export function Navbar() {
     setDrawerOpen(false);
   };
 
+  const handleLogout = async () => {
+    await logout();
+    navigate('/');
+  };
+
   const isActive = (path: string) =>
     path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
+
+  const isAdmin = isAuthenticated && user?.roles?.includes('Admin');
+
+  const getLinks = () => {
+    const links = COMMON_LINKS.filter(l => !isAdmin || l.path === '/');
+    if (isAdmin) {
+      links.push({ path: '/dashboard', key: 'nav.dashboard' });
+    }
+    return links;
+  };
 
   return (
     <>
@@ -54,7 +69,7 @@ export function Navbar() {
 
           {/* Desktop links */}
           <div className="navbar__links">
-            {NAV_LINKS.map(({ path, key }) => (
+            {getLinks().map(({ path, key }) => (
               <button
                 key={path}
                 className={`navbar__link ${isActive(path) ? 'navbar__link--active' : ''}`}
@@ -63,13 +78,31 @@ export function Navbar() {
                 {t(key)}
               </button>
             ))}
+            
+            {/* Auth Actions inside Navbar Links for Desktop */}
+            {!isAuthenticated ? (
+              <>
+                <button className={`navbar__link ${isActive('/login') ? 'navbar__link--active' : ''}`} onClick={() => go('/login')}>
+                  {t('auth.login', 'Login')}
+                </button>
+                <button className={`navbar__link ${isActive('/register') ? 'navbar__link--active' : ''}`} onClick={() => go('/register')}>
+                  {t('auth.register', 'Register')}
+                </button>
+              </>
+            ) : (
+              <button className="navbar__link" onClick={handleLogout}>
+                {t('auth.logout', 'Logout')} ({user?.fullName})
+              </button>
+            )}
           </div>
 
           {/* Right actions */}
           <div className="navbar__actions">
-            <button className="navbar__cart-btn" onClick={() => go('/checkout')}>
-              🛍️ <span className="navbar__cart-badge">{totalItems}</span>
-            </button>
+            {!isAdmin && (
+              <button className="navbar__cart-btn" onClick={() => go('/checkout')}>
+                🛍️ <span className="navbar__cart-badge">{totalItems}</span>
+              </button>
+            )}
 
             <button className="navbar__lang-btn" onClick={toggleLang}>
               {t('langToggle')}
@@ -95,7 +128,7 @@ export function Navbar() {
 
       {/* Mobile drawer */}
       <div className={`navbar__drawer ${drawerOpen ? 'navbar__drawer--open' : ''}`}>
-        {NAV_LINKS.map(({ path, key }) => (
+        {getLinks().map(({ path, key }) => (
           <button
             key={path}
             className={`navbar__drawer-link ${isActive(path) ? 'navbar__drawer-link--active' : ''}`}
@@ -104,6 +137,21 @@ export function Navbar() {
             {t(key)}
           </button>
         ))}
+        
+        {!isAuthenticated ? (
+          <>
+            <button className={`navbar__drawer-link ${isActive('/login') ? 'navbar__drawer-link--active' : ''}`} onClick={() => go('/login')}>
+              {t('auth.login', 'Login')}
+            </button>
+            <button className={`navbar__drawer-link ${isActive('/register') ? 'navbar__drawer-link--active' : ''}`} onClick={() => go('/register')}>
+              {t('auth.register', 'Register')}
+            </button>
+          </>
+        ) : (
+          <button className="navbar__drawer-link" onClick={handleLogout}>
+            {t('auth.logout', 'Logout')}
+          </button>
+        )}
       </div>
     </>
   );

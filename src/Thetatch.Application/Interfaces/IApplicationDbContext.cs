@@ -10,6 +10,10 @@ public interface IApplicationDbContext
     DbSet<Category> Categories { get; }
     DbSet<ProductImage> ProductImages { get; }
     DbSet<RefreshToken> RefreshTokens { get; }
+    
+    DbSet<Order> Orders { get; }
+    DbSet<OrderItem> OrderItems { get; }
+    DbSet<OrderStatusHistory> OrderStatusHistories { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }

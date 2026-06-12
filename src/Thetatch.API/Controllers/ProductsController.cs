@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Thetatch.Application.DTOs.Products;
 using Thetatch.Application.Interfaces;
@@ -119,5 +120,43 @@ public class ProductsController : ControllerBase
         };
 
         return Ok(response);
+    }
+
+    [HttpPost]
+    [Authorize(Roles = "Admin")]
+    public async Task<ActionResult> CreateProduct([FromBody] CreateProductRequest request)
+    {
+        var slug = request.NameEn.ToLower().Replace(" ", "-").Trim();
+
+        var product = new Domain.Entities.Product
+        {
+            Slug = slug + "-" + Guid.NewGuid().ToString().Substring(0, 4),
+            Name = new Domain.Common.LocalizedText { En = request.NameEn, Ar = request.NameAr },
+            Description = new Domain.Common.LocalizedText { En = request.DescriptionEn, Ar = request.DescriptionAr },
+            BasePrice = request.BasePrice,
+            CompareAtPrice = request.CompareAtPrice,
+            CategoryId = request.CategoryId,
+            Status = request.Status,
+            SeoTitle = new Domain.Common.LocalizedText { En = request.NameEn, Ar = request.NameAr },
+            SeoDescription = new Domain.Common.LocalizedText { En = request.DescriptionEn, Ar = request.DescriptionAr }
+        };
+
+        _context.Products.Add(product);
+        await _context.SaveChangesAsync();
+
+        return CreatedAtAction(nameof(GetProduct), new { slug = product.Slug }, null);
+    }
+
+    [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<ActionResult> DeleteProduct(Guid id)
+    {
+        var product = await _context.Products.FindAsync(id);
+        if (product == null) return NotFound();
+
+        product.IsDeleted = true;
+        await _context.SaveChangesAsync();
+
+        return NoContent();
     }
 }

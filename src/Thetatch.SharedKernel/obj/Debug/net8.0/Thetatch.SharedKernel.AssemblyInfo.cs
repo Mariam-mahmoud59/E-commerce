@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Thetatch.SharedKernel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70a9dbbe6b28111bf0b5cdcdd9641da8b1669d85")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a2a996e9d28b18209e3bf0b70d99d36aa966ab3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Thetatch.SharedKernel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Thetatch.SharedKernel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

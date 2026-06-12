@@ -1,112 +1,173 @@
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { RevealBox } from '../components/RevealBox/RevealBox';
-import { orders } from '../data/orders';
-import type { OrderStatus } from '../types/order';
+import { useAuth } from '../hooks/AuthContext';
+import { adminApi } from '../api/adminApi';
 import './DashboardPage.css';
-
-const CHART_DATA = [65, 82, 71, 90, 84, 96, 88, 104, 98, 115, 108, 124];
-const MONTHS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
-const MAX_CHART = Math.max(...CHART_DATA);
-
-interface StatCard {
-  label: string;
-  value: string;
-  icon: string;
-  change: string;
-  up: boolean;
-}
 
 export function DashboardPage() {
   const { t } = useTranslation();
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<'orders' | 'products'>('orders');
+  
+  const [orders, setOrders] = useState<any[]>([]);
+  const [products, setProducts] = useState<any[]>([]);
+  
+  const [newProduct, setNewProduct] = useState({
+    nameEn: '', nameAr: '', descriptionEn: '', descriptionAr: '', basePrice: 0, categoryId: '00000000-0000-0000-0000-000000000000'
+  });
 
-  const stats: StatCard[] = [
-    { label: t('dashboard.totalRevenue'), value: '$12,426', icon: '💰', change: '+12.5%', up: true },
-    { label: t('dashboard.totalOrders'), value: '284', icon: '📦', change: '+8.2%', up: true },
-    { label: t('dashboard.activeUsers'), value: '1,420', icon: '👥', change: '+15.3%', up: true },
-    { label: t('dashboard.pendingOrders'), value: '23', icon: '⏳', change: '-4.1%', up: false },
-  ];
+  const loadData = async () => {
+    if (!user?.token) return;
+    try {
+      if (activeTab === 'orders') {
+        const data = await adminApi.getOrders(user.token);
+        setOrders(data);
+      } else {
+        const res = await fetch('http://localhost:5191/api/products');
+        const data = await res.json();
+        setProducts(data);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-  const statusLabel = (status: OrderStatus) =>
-    t(`dashboard.${status}`) as string;
+  useEffect(() => {
+    loadData();
+  }, [activeTab, user]);
+
+  const handleUpdateOrderStatus = async (orderId: string, status: number) => {
+    if (!user?.token) return;
+    try {
+      await adminApi.updateOrderStatus(user.token, orderId, status);
+      loadData();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleDeleteProduct = async (id: string) => {
+    if (!user?.token) return;
+    try {
+      await adminApi.deleteProduct(user.token, id);
+      loadData();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleCreateProduct = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!user?.token) return;
+    try {
+      await adminApi.createProduct(user.token, newProduct);
+      loadData();
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <div className="dashboard page-enter">
       <div className="dashboard__inner">
-        <h1 className="dashboard__title">{t('dashboard.title')}</h1>
-
-        {/* Stats */}
-        <div className="dashboard__stats">
-          {stats.map((s, i) => (
-            <RevealBox key={i} delay={i * 0.08}>
-              <div className="dashboard__stat-card">
-                <div className="dashboard__stat-icon">{s.icon}</div>
-                <div className="dashboard__stat-value">{s.value}</div>
-                <div className="dashboard__stat-label">{s.label}</div>
-                <div
-                  className={`dashboard__stat-change ${s.up ? 'dashboard__stat-change--up' : 'dashboard__stat-change--down'}`}
-                >
-                  {s.change}
-                </div>
-              </div>
-            </RevealBox>
-          ))}
+        <h1 className="dashboard__title">Admin Dashboard</h1>
+        
+        <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
+          <button 
+            style={{ padding: '0.5rem 1rem', background: activeTab === 'orders' ? '#333' : '#eee', color: activeTab === 'orders' ? '#fff' : '#333' }}
+            onClick={() => setActiveTab('orders')}
+          >
+            Manage Orders
+          </button>
+          <button 
+            style={{ padding: '0.5rem 1rem', background: activeTab === 'products' ? '#333' : '#eee', color: activeTab === 'products' ? '#fff' : '#333' }}
+            onClick={() => setActiveTab('products')}
+          >
+            Manage Products
+          </button>
         </div>
 
-        {/* Chart */}
-        <RevealBox delay={0.1}>
-          <div className="dashboard__chart-card">
-            <h2 className="dashboard__section-title">{t('dashboard.revenue')}</h2>
-            <div className="dashboard__chart">
-              {CHART_DATA.map((val, i) => (
-                <div key={i} className="dashboard__chart-bar-wrap">
-                  <div
-                    className="dashboard__chart-bar"
-                    style={{
-                      height: `${(val / MAX_CHART) * 100}%`,
-                      animationDelay: `${i * 0.06}s`,
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="dashboard__chart-labels">
-              {MONTHS.map((m) => (
-                <span key={m} className="dashboard__chart-label">{m}</span>
-              ))}
-            </div>
-          </div>
-        </RevealBox>
-
-        {/* Orders table */}
-        <RevealBox delay={0.2}>
+        {activeTab === 'orders' && (
           <div className="dashboard__table-card">
-            <h2 className="dashboard__section-title">{t('dashboard.recentOrders')}</h2>
+            <h2 className="dashboard__section-title">Orders</h2>
             <table className="dashboard__table">
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>{t('dashboard.customer')}</th>
-                  <th>{t('dashboard.amount')}</th>
-                  <th>{t('dashboard.status')}</th>
+                  <th>Customer</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 {orders.map((o) => (
                   <tr key={o.id}>
-                    <td>{o.id}</td>
-                    <td>{o.customer}</td>
-                    <td>{o.amount}</td>
+                    <td>{o.orderNumber || o.id.substring(0, 8)}</td>
+                    <td>{o.customerName}</td>
+                    <td>{o.totalAmount}</td>
+                    <td>{o.status}</td>
                     <td>
-                      <span className={`dashboard__status dashboard__status--${o.status}`}>
-                        {statusLabel(o.status)}
-                      </span>
+                      <select 
+                        value={o.status} 
+                        onChange={(e) => handleUpdateOrderStatus(o.id, parseInt(e.target.value))}
+                      >
+                        <option value="0">Pending</option>
+                        <option value="1">Contacted</option>
+                        <option value="2">Confirmed</option>
+                        <option value="3">Paid</option>
+                        <option value="4">Processing</option>
+                        <option value="5">Shipped</option>
+                        <option value="6">Delivered</option>
+                        <option value="7">Cancelled</option>
+                      </select>
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-        </RevealBox>
+        )}
+
+        {activeTab === 'products' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <div className="dashboard__table-card">
+              <h2 className="dashboard__section-title">Products</h2>
+              <table className="dashboard__table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {products.map((p) => (
+                    <tr key={p.id}>
+                      <td>{p.name.en}</td>
+                      <td>{p.basePrice}</td>
+                      <td>
+                        <button onClick={() => handleDeleteProduct(p.id)} style={{ color: 'red' }}>Delete</button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="dashboard__table-card">
+              <h2 className="dashboard__section-title">Add New Product</h2>
+              <form onSubmit={handleCreateProduct} style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '400px' }}>
+                <input placeholder="Name EN" value={newProduct.nameEn} onChange={e => setNewProduct({...newProduct, nameEn: e.target.value})} required />
+                <input placeholder="Name AR" value={newProduct.nameAr} onChange={e => setNewProduct({...newProduct, nameAr: e.target.value})} required />
+                <input placeholder="Desc EN" value={newProduct.descriptionEn} onChange={e => setNewProduct({...newProduct, descriptionEn: e.target.value})} required />
+                <input placeholder="Desc AR" value={newProduct.descriptionAr} onChange={e => setNewProduct({...newProduct, descriptionAr: e.target.value})} required />
+                <input type="number" placeholder="Price" value={newProduct.basePrice} onChange={e => setNewProduct({...newProduct, basePrice: parseFloat(e.target.value)})} required />
+                <button type="submit" style={{ padding: '0.5rem', background: '#333', color: '#fff' }}>Add Product</button>
+              </form>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
