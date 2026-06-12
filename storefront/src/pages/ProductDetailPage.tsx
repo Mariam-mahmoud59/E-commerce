@@ -15,6 +15,13 @@ export function ProductDetailPage() {
   const product = products.find((p) => p.id === Number(id));
   const [qty, setQty] = useState(1);
   const [justAdded, setJustAdded] = useState(false);
+  const [mainImage, setMainImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (product) {
+      setMainImage(product.image);
+    }
+  }, [product]);
 
   useEffect(() => {
     if (!justAdded) return;
@@ -32,7 +39,6 @@ export function ProductDetailPage() {
       <div className="pdp page-enter">
         <div className="pdp__inner">
           <div className="pdp__not-found">
-            <div className="pdp__not-found-emoji">🔍</div>
             <h1 className="pdp__not-found-title">{t('product.notFound')}</h1>
             <p className="pdp__not-found-desc">{t('product.notFoundDesc')}</p>
             <button className="pdp__not-found-btn" onClick={() => navigate('/shop')}>
@@ -51,6 +57,12 @@ export function ProductDetailPage() {
     setJustAdded(true);
   };
 
+  // Mock secondary images based on category (for demo purposes)
+  const galleryImages = [
+    product.image,
+    product.image.replace('.jpg', '-detail.jpg').replace('.png', '-detail.png'), // mock detail image
+  ];
+
   return (
     <div className="pdp page-enter">
       <div className="pdp__inner">
@@ -62,12 +74,16 @@ export function ProductDetailPage() {
           {/* Image */}
           <RevealBox>
             <div className="pdp__image-main">
-              <span className="pdp__image-emoji">{product.emoji}</span>
+              <img src={mainImage || product.image} alt={name} className="pdp__image-img" />
             </div>
             <div className="pdp__thumbs">
-              {[product.emoji, '🪔', '🫙'].map((e, i) => (
-                <div key={i} className={`pdp__thumb ${i === 0 ? 'pdp__thumb--active' : ''}`}>
-                  {e}
+              {galleryImages.map((img, i) => (
+                <div 
+                  key={i} 
+                  className={`pdp__thumb ${mainImage === img ? 'pdp__thumb--active' : ''}`}
+                  onClick={() => setMainImage(img)}
+                >
+                  <img src={img} alt={`${name} thumbnail`} onError={(e) => (e.currentTarget.style.display = 'none')} />
                 </div>
               ))}
             </div>
@@ -92,9 +108,9 @@ export function ProductDetailPage() {
             </div>
 
             <p className="pdp__desc">
-              Hand-thrown on a traditional potter's wheel from Moroccan clay, finished with a
-              natural ash glaze. Each piece is unique — slight variations in texture and tone are a
-              mark of its handmade origins.
+              Constructed from premium heavyweight fabrics for maximum durability and comfort.
+              Featuring an oversized drop-shoulder fit, double-stitched seams, and our signature branding.
+              Designed for the streets, built to last.
             </p>
 
             {/* Quantity */}

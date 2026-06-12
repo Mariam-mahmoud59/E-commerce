@@ -9,7 +9,7 @@ export function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [preferredLanguage, setPreferredLanguage] = useState('en');
+
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
@@ -28,7 +28,7 @@ export function RegisterPage() {
         email, 
         password, 
         phone: phoneNumber, 
-        preferredLanguage: i18n.language || preferredLanguage 
+        preferredLanguage: i18n.language || 'en' 
       });
       navigate('/dashboard');
     } catch (err: any) {

@@ -1,5 +1,5 @@
 /* ─── PRODUCT DETAIL PAGE ──────────────────────────────────────────── */
-.pdp { padding-top: 100px; min-height: 100vh; }
+.pdp { padding-top: 100px; min-height: 100vh; background: var(--dark); }
 .pdp__inner {
   padding: 40px clamp(16px, 6vw, 80px); max-width: 1280px; margin: 0 auto;
 }
@@ -7,11 +7,13 @@
 /* ─── BACK BUTTON ──────────────────────────────────────────────────── */
 .pdp__back {
   background: none; border: none; cursor: pointer;
-  font-family: var(--font-body); font-size: 14px; color: var(--amber);
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  color: var(--mid-text);
   margin-bottom: 32px; display: flex; align-items: center; gap: 6px;
-  transition: opacity 0.2s;
+  transition: color 0.2s;
+  text-transform: uppercase; letter-spacing: 0.1em;
 }
-.pdp__back:hover { opacity: 0.8; }
+.pdp__back:hover { color: var(--light-text); }
 
 /* ─── GRID ─────────────────────────────────────────────────────────── */
 .pdp__grid {
@@ -20,143 +22,143 @@
 
 /* ─── IMAGE ────────────────────────────────────────────────────────── */
 .pdp__image-main {
-  background: linear-gradient(135deg, var(--dark-mid), var(--mid));
-  border-radius: 24px; overflow: hidden; cursor: zoom-in;
+  background: var(--dark-mid);
+  border-radius: 12px; overflow: hidden; cursor: zoom-in;
   border: 1px solid var(--glass-border);
-  height: 480px; display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+  height: 540px; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
-.pdp__image-emoji {
-  font-size: 140px; transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.5));
+.pdp__image-img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.pdp__image-main:hover .pdp__image-emoji { transform: scale(1.18); }
+.pdp__image-main:hover .pdp__image-img { transform: scale(1.05); }
 
 .pdp__thumbs { display: flex; gap: 12px; margin-top: 16px; }
 .pdp__thumb {
-  width: 72px; height: 72px; border-radius: 10px; cursor: pointer;
-  background: linear-gradient(135deg, var(--dark-mid), var(--mid));
-  border: 2px solid rgba(184, 134, 11, 0.2);
+  width: 80px; height: 80px; border-radius: 8px; cursor: pointer;
+  background: var(--dark-mid);
+  border: 2px solid transparent;
   display: flex; align-items: center; justify-content: center;
-  font-size: 28px; transition: border-color 0.2s ease;
+  overflow: hidden; transition: border-color 0.2s ease;
 }
-.pdp__thumb--active { border-color: var(--amber); }
+.pdp__thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.pdp__thumb--active { border-color: var(--accent); }
 
 /* ─── INFO ─────────────────────────────────────────────────────────── */
 .pdp__category {
-  font-family: var(--font-body); font-size: 12px; font-weight: 600;
-  color: var(--amber); letter-spacing: 0.1em; margin-bottom: 10px;
+  font-family: var(--font-body); font-size: 12px; font-weight: 700;
+  color: var(--accent); letter-spacing: 0.15em; margin-bottom: 12px;
+  text-transform: uppercase;
 }
 .pdp__title {
   font-family: var(--font-heading); font-weight: 800;
-  font-size: clamp(26px, 3vw, 42px); color: var(--cream);
-  margin-bottom: 16px; letter-spacing: -0.02em;
+  font-size: clamp(28px, 3vw, 48px); color: var(--light-text);
+  margin-bottom: 16px; letter-spacing: -0.02em; text-transform: uppercase;
 }
 .pdp__rating {
-  display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
 }
-.pdp__stars { font-size: 18px; color: var(--amber); }
+.pdp__stars { font-size: 18px; color: var(--accent); }
 .pdp__rating-text {
-  font-family: var(--font-body); font-size: 14px; color: rgba(255, 253, 208, 0.6);
+  font-family: var(--font-body); font-size: 14px; color: var(--mid-text);
 }
 .pdp__in-stock {
-  font-size: 12px; background: rgba(0, 107, 60, 0.2); color: #4ade80;
-  border: 1px solid rgba(74, 222, 128, 0.3); border-radius: 5px;
-  padding: 3px 8px; font-family: var(--font-body); font-weight: 600;
+  font-size: 12px; background: rgba(74, 222, 128, 0.1); color: var(--green);
+  border: 1px solid rgba(74, 222, 128, 0.2); border-radius: 4px;
+  padding: 4px 10px; font-family: var(--font-body); font-weight: 600;
+  letter-spacing: 0.05em; text-transform: uppercase;
 }
 
-.pdp__price-row { display: flex; align-items: baseline; gap: 14px; margin-bottom: 28px; }
+.pdp__price-row { display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px; }
 .pdp__price {
-  font-family: var(--font-heading); font-weight: 900; font-size: 40px;
-  background: var(--grad-main);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: var(--font-heading); font-weight: 900; font-size: 36px;
+  color: var(--accent);
 }
 .pdp__old-price {
   font-family: var(--font-body); font-size: 18px;
-  color: rgba(255, 253, 208, 0.35); text-decoration: line-through;
+  color: var(--mid-text); text-decoration: line-through;
 }
 
 .pdp__desc {
-  font-family: var(--font-body); font-weight: 300; line-height: 1.75;
-  color: rgba(255, 253, 208, 0.72); margin-bottom: 32px; font-size: 15px;
+  font-family: var(--font-body); font-weight: 400; line-height: 1.6;
+  color: var(--mid-text); margin-bottom: 40px; font-size: 16px;
 }
 
 /* ─── QUANTITY ──────────────────────────────────────────────────────── */
-.pdp__qty-row { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+.pdp__qty-row { display: flex; align-items: center; gap: 20px; margin-bottom: 32px; }
 .pdp__qty-label {
-  font-family: var(--font-body); font-weight: 500; font-size: 14px;
-  color: rgba(255, 253, 208, 0.6);
+  font-family: var(--font-body); font-weight: 600; font-size: 14px;
+  color: var(--light-text); text-transform: uppercase; letter-spacing: 0.05em;
 }
 .pdp__qty-controls {
   display: flex; align-items: center;
-  border: 1px solid var(--glass-border); border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--glass-border); border-radius: 8px; overflow: hidden;
+  background: var(--dark-mid);
 }
 .pdp__qty-btn {
-  background: var(--glass); border: none; padding: 10px 16px; cursor: pointer;
+  background: transparent; border: none; padding: 12px 20px; cursor: pointer;
   font-family: var(--font-body); font-weight: 700; font-size: 18px;
-  color: var(--amber); transition: background 0.2s;
+  color: var(--accent); transition: background 0.2s;
 }
-.pdp__qty-btn:hover { background: rgba(255, 253, 208, 0.2); }
+.pdp__qty-btn:hover { background: var(--glass); }
 .pdp__qty-value {
-  padding: 0 20px; font-family: var(--font-heading); font-weight: 700;
-  font-size: 16px; color: var(--cream); background: var(--glass);
+  padding: 0 24px; font-family: var(--font-heading); font-weight: 700;
+  font-size: 16px; color: var(--light-text);
 }
 
 /* ─── ADD TO CART CTA ──────────────────────────────────────────────── */
 .pdp__add-btn {
-  width: 100%; padding: 17px 0; border-radius: 13px; border: none; cursor: pointer;
-  font-family: var(--font-heading); font-weight: 700; font-size: 16px;
-  letter-spacing: 0.06em; color: var(--white); transition: all 0.4s ease;
-  background: var(--grad-main);
-  box-shadow: 0 4px 24px rgba(192, 64, 0, 0.5);
+  width: 100%; padding: 20px 0; border-radius: 8px; border: none; cursor: pointer;
+  font-family: var(--font-heading); font-weight: 800; font-size: 16px;
+  letter-spacing: 0.1em; color: var(--dark); text-transform: uppercase;
+  transition: all 0.3s ease;
+  background: var(--accent);
 }
-.pdp__add-btn:hover { box-shadow: 0 8px 32px rgba(192, 64, 0, 0.65); transform: translateY(-2px); }
+.pdp__add-btn:hover { background: #f0ff4d; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 .pdp__add-btn:active { transform: scale(0.98); }
 .pdp__add-btn--added {
-  background: #006B3C;
-  box-shadow: 0 4px 24px rgba(0, 107, 60, 0.5);
+  background: var(--green); color: var(--dark);
 }
 .pdp__add-btn-inner { display: flex; align-items: center; justify-content: center; gap: 10px; }
 .pdp__add-btn-check { animation: checkPop 0.4s ease; }
 
 .pdp__delivery {
-  margin-top: 16px; font-family: var(--font-body); font-size: 12px;
-  color: rgba(255, 253, 208, 0.4); text-align: center;
+  margin-top: 20px; font-family: var(--font-body); font-size: 13px;
+  color: var(--mid-text); text-align: center;
 }
 
 /* ─── NOT FOUND STATE ──────────────────────────────────────────────── */
 .pdp__not-found {
-  text-align: center; padding: 80px 20px;
+  text-align: center; padding: 100px 20px;
 }
-.pdp__not-found-emoji { font-size: 64px; margin-bottom: 20px; }
 .pdp__not-found-title {
-  font-family: var(--font-heading); font-weight: 800; font-size: 28px;
-  color: var(--cream); margin-bottom: 12px;
+  font-family: var(--font-heading); font-weight: 800; font-size: 32px;
+  color: var(--light-text); margin-bottom: 12px; text-transform: uppercase;
 }
 .pdp__not-found-desc {
-  font-family: var(--font-body); color: rgba(255, 253, 208, 0.6);
+  font-family: var(--font-body); color: var(--mid-text);
   font-size: 16px; margin-bottom: 32px;
 }
 .pdp__not-found-btn {
-  background: var(--grad-main); border: none; border-radius: 12px;
-  padding: 14px 32px; cursor: pointer;
+  background: var(--accent); border: none; border-radius: 8px;
+  padding: 16px 32px; cursor: pointer;
   font-family: var(--font-heading); font-weight: 700; font-size: 15px;
-  color: var(--white); letter-spacing: 0.06em;
-  box-shadow: 0 4px 24px rgba(192, 64, 0, 0.5);
-  transition: transform 0.15s;
+  color: var(--dark); letter-spacing: 0.05em; text-transform: uppercase;
+  transition: transform 0.2s;
 }
 .pdp__not-found-btn:hover { transform: translateY(-2px); }
 
 /* ─── RESPONSIVE ───────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .pdp__grid { grid-template-columns: 1fr; gap: 40px; }
-  .pdp__image-main { height: 360px; }
+  .pdp__image-main { height: 440px; }
 }
 @media (max-width: 768px) {
   .pdp__inner { padding: 24px 16px; }
-  .pdp__image-main { height: 280px; }
-  .pdp__image-emoji { font-size: 90px; }
-  .pdp__thumb { width: 56px; height: 56px; font-size: 22px; }
+  .pdp__image-main { height: 340px; }
+  .pdp__thumb { width: 64px; height: 64px; }
   .pdp__price { font-size: 32px; }
 }

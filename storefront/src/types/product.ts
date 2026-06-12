@@ -1,4 +1,4 @@
-export type Category = 'Ceramics' | 'Textiles' | 'Jewelry' | 'Woodcraft' | 'Glasswork';
+export type Category = 'Tees' | 'Hoodies' | 'Womens' | 'Accessories' | 'Bottoms';
 
 export type BadgeType = 'Bestseller' | 'New' | 'Sale';
 
@@ -9,7 +9,7 @@ export interface Product {
   price: number;
   oldPrice: number | null;
   category: Category;
-  emoji: string;
+  image: string;
   rating: number;
   reviews: number;
   badge: BadgeType | null;

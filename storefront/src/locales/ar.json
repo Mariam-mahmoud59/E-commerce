@@ -1,13 +1,13 @@
 {
-  "brand": "هورايزونز",
-  "tagline": "الحرفة. التجارة. الثقافة.",
+  "brand": "Thetateach Store",
+  "tagline": "أزياء. حصري. تجدد.",
   "langToggle": "English",
-  "scroll": "مرر",
-  "collections": "✦ المجموعات",
-  "copyright": "© ٢٠٢٦ هورايزونز للتجارة. جميع الحقوق محفوظة.",
+  "scroll": "تمرير",
+  "collections": "التشكيلات",
+  "copyright": "© 2026 Thetateach Store. جميع الحقوق محفوظة.",
   "satisfaction": "رضا العملاء",
   "countries": "دولة",
-  "artisans": "حرفي",
+  "artisans": "مصمم",
   "continue": "متابعة",
 
   "nav": {
@@ -18,26 +18,64 @@
   },
 
   "hero": {
-    "titleLine1": "ارتقِ بكل",
-    "titleLine2": "عملية شراء",
-    "subtitle": "مجموعات منتقاة. حرفية راقية. تُوصَّل إلى بابك.",
+    "titleLine1": "اصنع",
+    "titleLine2": "أسلوبك الخاص",
+    "subtitle": "إصدارات جريئة. كميات محدودة. صُنعت من أجل الثقافة.",
     "shopNow": "تسوق الآن",
-    "exploreAll": "استكشف الكل",
-    "product0": "سيراميك حرفي",
-    "product1": "منسوجات يدوية",
-    "product2": "مجوهرات مصنوعة يدوياً"
+    "exploreAll": "تصفح المجموعة",
+    "product0": "أزياء واسعة",
+    "product1": "هودي فاخر",
+    "product2": "أحذية حصرية"
+  },
+
+  "home": {
+    "marquee": "إصدارات جديدة • كمية محدودة • أزياء الشارع • شحن مجاني",
+    "collectionsLabel": "التشكيلات",
+    "collectionsTitle": "منسقة للشارع.",
+    "col1Title": "تي شيرت واسع",
+    "col1Desc": "أساسيات قطنية ثقيلة.",
+    "col1Cta": "تسوق التي شيرت",
+    "col2Title": "هودي وطبقات",
+    "col2Desc": "الراحة تلتقي بالتصميم الجريء.",
+    "col2Cta": "تسوق الهودي",
+    "col3Title": "إكسسوارات",
+    "col3Desc": "أكمل مظهرك.",
+    "col3Cta": "تسوق الإكسسوارات",
+    "parallaxLabel": "افتتاحية",
+    "parallaxTitle": "أكثر من مجرد ملابس. إنها رسالة.",
+    "parallaxBody": "نعيد تعريف أزياء الشارع بدمج الجماليات الراقية مع الراحة اليومية. كل قطعة مصممة لتلفت الأنظار.",
+    "parallaxCta": "اقرأ قصتنا",
+    "ctaTitle": "انضم إلى النقابة",
+    "ctaSubtitle": "احصل على وصول مبكر للإصدارات الحصرية وخصم 15% على طلبك الأول.",
+    "ctaBtn": "سجل الآن"
+  },
+
+  "footer": {
+    "shop": "المتجر",
+    "shopTees": "تي شيرت",
+    "shopHoodies": "هودي",
+    "shopBottoms": "بناطيل",
+    "shopAccessories": "إكسسوارات",
+    "support": "الدعم",
+    "faq": "الأسئلة الشائعة",
+    "shipping": "الشحن والإرجاع",
+    "contact": "اتصل بنا",
+    "company": "الشركة",
+    "about": "معلومات عنا",
+    "careers": "وظائف",
+    "terms": "الشروط والأحكام"
   },
 
   "product": {
-    "featured": "المجموعات المميزة",
+    "featured": "أحدث الإصدارات",
     "addToCart": "أضف للسلة",
-    "quickView": "عرض سريع",
+    "quickView": "نظرة سريعة",
     "added": "تمت الإضافة!",
     "inStock": "متوفر",
     "reviews": "تقييمات",
     "qty": "الكمية",
-    "deliveryTime": "التسليم: ٣–٥ أيام عمل",
-    "back": "رجوع →",
+    "deliveryTime": "التوصيل: 3-5 أيام عمل",
+    "back": "← عودة",
     "notFound": "المنتج غير موجود",
     "notFoundDesc": "المنتج الذي تبحث عنه غير موجود.",
     "goToShop": "الذهاب للمتجر"
@@ -46,9 +84,9 @@
   "checkout": {
     "title": "الدفع",
     "orderSummary": "ملخص الطلب",
-    "placeOrder": "تأكيد الطلب",
-    "processing": "جاري المعالجة…",
-    "orderPlaced": "تم الطلب! ✓",
+    "placeOrder": "إتمام الطلب",
+    "processing": "جاري المعالجة...",
+    "orderPlaced": "تم تأكيد الطلب! ✓",
     "subtotal": "المجموع الفرعي",
     "shipping": "الشحن",
     "total": "الإجمالي",
@@ -63,27 +101,26 @@
     "step1": "التفاصيل",
     "step2": "الشحن",
     "step3": "الدفع",
-    "orderSuccess": "منتجاتك الحرفية في طريقها إليك."
+    "orderSuccess": "أزياءك الجديدة في طريقها إليك."
   },
 
   "dashboard": {
     "title": "لوحة التحكم",
     "totalRevenue": "إجمالي الإيرادات",
     "totalOrders": "إجمالي الطلبات",
-    "totalOrders_stat": "طلب",
-    "activeUsers": "المستخدمون النشطون",
-    "pendingOrders": "الطلبات المعلقة",
+    "activeUsers": "المستخدمين النشطين",
+    "pendingOrders": "طلبات قيد الانتظار",
     "recentOrders": "الطلبات الأخيرة",
     "status": "الحالة",
     "customer": "العميل",
     "amount": "المبلغ",
-    "pending": "معلق",
+    "pending": "قيد الانتظار",
     "shipped": "تم الشحن",
-    "delivered": "تم التسليم",
+    "delivered": "تم التوصيل",
     "revenue": "نظرة عامة على الإيرادات"
   },
 
   "cart": {
-    "remove": "إزالة"
+    "remove": "حذف"
   }
 }

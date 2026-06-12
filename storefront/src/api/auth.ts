@@ -2,27 +2,6 @@ import type { LoginRequest, RegisterRequest, AuthResponse } from '../types/auth'
 
 const API_BASE_URL = 'http://localhost:5191/api';
 
-/**
- * Standard fetch wrapper for authentication requests
- */
-async function fetchApi<T>(endpoint: string, options: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-    ...options,
-    headers: {
-      'Content-Type': 'application/json',
-      ...options.headers,
-    },
-    // Required to send/receive HTTP-only refresh token cookies
-    credentials: 'omit', // Wait, ASP.NET Core Cors default doesn't allow credentials unless specified. Let's start with omit, but for cookies it must be 'include'. I will use 'include'.
-  });
-
-  if (!response.ok) {
-    const errorData = await response.json().catch(() => ({}));
-    throw new Error(errorData.message || `API Error: ${response.status}`);
-  }
-
-  return response.json();
-}
 
 /**
  * Standard fetch wrapper for authentication requests
@@ -59,7 +38,7 @@ async function fetchApiWithCredentials<T>(endpoint: string, options: RequestInit
 
   // Handle empty responses
   const text = await response.text();
-  return text ? JSON.parse(text) : ({} as T);
+  return text ? JSON.parse(text) : (undefined as unknown as T);
 }
 
 

@@ -1,29 +1,121 @@
 .footer {
-  padding: 48px clamp(16px, 6vw, 80px);
-  background: var(--dark);
-  border-top: 1px solid rgba(184, 134, 11, 0.12);
+  padding: 80px clamp(16px, 6vw, 48px) 40px;
+  background: var(--dark-mid);
+  border-top: 1px solid var(--glass-border);
 }
 .footer__inner {
   max-width: 1280px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
+.footer__inner--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 .footer__brand {
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: 20px;
+  font-size: 24px;
   background: var(--grad-main);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-bottom: 12px;
+  text-transform: uppercase;
 }
+
+.footer__tagline {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--mid-text);
+  line-height: 1.6;
+}
+
+.footer__col-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__links a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--mid-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: var(--light-text);
+}
+
+.footer__divider {
+  height: 1px;
+  background: var(--glass-border);
+  margin: 48px 0;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .footer__copy {
   font-family: var(--font-body);
-  font-size: 12px;
-  color: rgba(255, 253, 208, 0.35);
+  font-size: 13px;
+  color: rgba(245, 245, 245, 0.4);
   letter-spacing: 0.04em;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer__socials a {
+  color: rgba(245, 245, 245, 0.5);
+  transition: all 0.3s ease;
+  display: flex;
+}
+
+.footer__socials a:hover {
+  color: var(--light-text);
+  transform: translateY(-2px);
 }

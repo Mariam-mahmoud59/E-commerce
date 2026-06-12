@@ -1,13 +1,13 @@
 {
-  "brand": "HORIZONS",
-  "tagline": "Craft. Commerce. Culture.",
+  "brand": "Thetateach Store",
+  "tagline": "Drop. Wear. Repeat.",
   "langToggle": "العربية",
   "scroll": "SCROLL",
   "collections": "COLLECTIONS",
-  "copyright": "© 2026 Horizons Commerce. All rights reserved.",
+  "copyright": "© 2026 Thetateach Store. All rights reserved.",
   "satisfaction": "Satisfaction",
   "countries": "Countries",
-  "artisans": "Artisans",
+  "artisans": "Creators",
   "continue": "Continue",
 
   "nav": {
@@ -18,18 +18,56 @@
   },
 
   "hero": {
-    "titleLine1": "Elevate Your",
-    "titleLine2": "Every Purchase",
-    "subtitle": "Curated collections. Premium craftsmanship. Delivered to your door.",
-    "shopNow": "Shop Now",
-    "exploreAll": "Explore All",
-    "product0": "Artisan Ceramics",
-    "product1": "Woven Textiles",
-    "product2": "Handcrafted Jewelry"
+    "titleLine1": "Own Your",
+    "titleLine2": "Street Style",
+    "subtitle": "Bold drops. Limited runs. Made for the culture.",
+    "shopNow": "Shop the Drop",
+    "exploreAll": "View Lookbook",
+    "product0": "Oversized Fits",
+    "product1": "Premium Hoodies",
+    "product2": "Exclusive Kicks"
+  },
+
+  "home": {
+    "marquee": "NEW DROP • LIMITED EDITION • STREETWEAR • FREE SHIPPING",
+    "collectionsLabel": "THE COLLECTIONS",
+    "collectionsTitle": "Curated for the streets.",
+    "col1Title": "Oversized Tees",
+    "col1Desc": "Heavyweight cotton essentials.",
+    "col1Cta": "Shop Tees",
+    "col2Title": "Hoodies & Layers",
+    "col2Desc": "Comfort meets bold design.",
+    "col2Cta": "Shop Hoodies",
+    "col3Title": "Accessories",
+    "col3Desc": "Complete the look.",
+    "col3Cta": "Shop Accessories",
+    "parallaxLabel": "EDITORIAL",
+    "parallaxTitle": "More than clothing. It's a statement.",
+    "parallaxBody": "We redefine urban wear by merging high-end aesthetics with everyday comfort. Every piece is designed to turn heads.",
+    "parallaxCta": "Read Our Story",
+    "ctaTitle": "Join the Syndicate",
+    "ctaSubtitle": "Get early access to exclusive drops and 15% off your first order.",
+    "ctaBtn": "Sign Up Now"
+  },
+
+  "footer": {
+    "shop": "Shop",
+    "shopTees": "Tees",
+    "shopHoodies": "Hoodies",
+    "shopBottoms": "Bottoms",
+    "shopAccessories": "Accessories",
+    "support": "Support",
+    "faq": "FAQ",
+    "shipping": "Shipping & Returns",
+    "contact": "Contact Us",
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "terms": "Terms & Conditions"
   },
 
   "product": {
-    "featured": "Featured Collections",
+    "featured": "Latest Drops",
     "addToCart": "Add to Cart",
     "quickView": "Quick View",
     "added": "Added!",
@@ -39,7 +77,7 @@
     "deliveryTime": "Delivery: 3–5 business days",
     "back": "← Back",
     "notFound": "Product not found",
-    "notFoundDesc": "The product you're looking for doesn't exist.",
+    "notFoundDesc": "The item you're looking for doesn't exist.",
     "goToShop": "Go to Shop"
   },
 
@@ -63,7 +101,7 @@
     "step1": "Details",
     "step2": "Shipping",
     "step3": "Payment",
-    "orderSuccess": "Your artisan goods are on their way."
+    "orderSuccess": "Your fresh gear is on its way."
   },
 
   "dashboard": {

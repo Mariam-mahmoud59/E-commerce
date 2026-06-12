@@ -132,7 +132,7 @@ export function CheckoutPage() {
                     items.map((item) => (
                       <div key={item.product.id} className="checkout__item">
                         <div className="checkout__item-left">
-                          <span className="checkout__item-emoji">{item.product.emoji}</span>
+                          <img src={item.product.image} alt="product" className="checkout__item-img" />
                           <span className="checkout__item-name">
                             {i18n.language === 'ar' ? item.product.nameAr : item.product.nameEn}
                           </span>

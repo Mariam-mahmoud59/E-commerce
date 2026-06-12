@@ -47,7 +47,7 @@ export function ProductCard({ product, delay = 0 }: ProductCardProps) {
       <div className="product-card" onClick={() => navigate(`/product/${product.id}`)}>
         {/* Image zone */}
         <div className="product-card__image">
-          <span className="product-card__emoji">{product.emoji}</span>
+          <img src={product.image} alt={name} className="product-card__img" loading="lazy" />
 
           {product.badge && (
             <span className={`product-card__badge ${badgeClass}`}>

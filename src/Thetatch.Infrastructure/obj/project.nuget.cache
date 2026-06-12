@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ku9J3zP8bFg=",
+  "dgSpecHash": "ikxnL0kd/kU=",
   "success": true,
-  "projectFilePath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj",
+  "projectFilePath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mariam\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\Mariam\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",

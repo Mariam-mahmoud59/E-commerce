@@ -6,7 +6,7 @@ import { products } from '../data/products';
 import type { Category } from '../types/product';
 import './ShopPage.css';
 
-const CATEGORIES: Array<Category | 'All'> = ['All', 'Ceramics', 'Textiles', 'Jewelry', 'Woodcraft', 'Glasswork'];
+const CATEGORIES: Array<Category | 'All'> = ['All', 'Tees', 'Hoodies', 'Bottoms', 'Accessories'];
 
 export function ShopPage() {
   const { t } = useTranslation();

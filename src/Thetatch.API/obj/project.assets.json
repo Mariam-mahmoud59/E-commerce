@@ -3353,11 +3353,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
+      "projectUniqueName": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
       "projectName": "Thetatch.API",
-      "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
+      "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
       "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
-      "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\obj\\",
+      "outputPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3372,14 +3372,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
-              "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj"
+            "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
+              "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj"
             },
-            "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {
-              "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj"
+            "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {
+              "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj"
             },
-            "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
-              "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
+            "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
+              "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
             }
           }
         }
