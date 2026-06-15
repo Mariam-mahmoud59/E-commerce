@@ -9,6 +9,8 @@ import { CheckoutPage } from './pages/CheckoutPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { LoginPage } from './pages/LoginPage';
 import { RegisterPage } from './pages/RegisterPage';
+import { ProfilePage } from './pages/ProfilePage';
+import { OrderDetailPage } from './pages/OrderDetailPage';
 import { ProtectedRoute } from './components/ProtectedRoute/ProtectedRoute';
 
 export default function App() {
@@ -26,6 +28,22 @@ export default function App() {
             element={
               <ProtectedRoute requiredRole="Admin">
                 <DashboardPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/profile" 
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/order/:id" 
+            element={
+              <ProtectedRoute>
+                <OrderDetailPage />
               </ProtectedRoute>
             } 
           />

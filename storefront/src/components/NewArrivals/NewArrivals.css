@@ -1,0 +1,212 @@
+.new-arrivals-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 96px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .new-arrivals-wrapper {
+    padding: 128px 48px;
+  }
+}
+
+.new-arrivals {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.new-arrivals__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .new-arrivals__header {
+    margin-bottom: 96px;
+  }
+}
+
+.new-arrivals__title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  display: inline-block;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #ff5c00, #8b5cf6, #ccff00);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .new-arrivals__title {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .new-arrivals__title {
+    font-size: 72px;
+  }
+}
+
+.new-arrivals__subtitle {
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 18px;
+  max-width: 672px;
+  margin: 0 auto;
+  letter-spacing: 0.025em;
+  padding-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .new-arrivals__subtitle {
+    font-size: 20px;
+  }
+}
+
+.new-arrivals__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .new-arrivals__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .new-arrivals__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}
+
+.tilt-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 0.3s;
+}
+
+.tilt-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tilt-card__image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateZ(40px);
+}
+
+.tilt-card__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 700ms, opacity 700ms, mix-blend-mode 700ms;
+  opacity: 0.7;
+  mix-blend-mode: luminosity;
+}
+
+.tilt-card:hover .tilt-card__image {
+  transform: scale(1.1);
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+.tilt-card__tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #8b5cf6, #ff5c00);
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.tilt-card__button {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  transform: translateY(48px);
+  opacity: 0;
+  transition: all 300ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #ccff00;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: 700;
+  box-shadow: 0 0 15px rgba(204, 255, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 10;
+}
+
+.tilt-card:hover .tilt-card__button {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.tilt-card__button:hover {
+  background-color: #fff;
+  transform: scale(1.05) !important;
+}
+
+.tilt-card__button:active {
+  transform: scale(0.95) !important;
+}
+
+.tilt-card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 8px 4px 0;
+  transform: translateZ(20px);
+}
+
+.tilt-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.025em;
+  margin: 0;
+}
+
+.tilt-card__price {
+  color: #8b5cf6;
+  font-weight: 600;
+  margin-top: 4px;
+}

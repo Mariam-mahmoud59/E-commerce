@@ -13,13 +13,19 @@
   "nav": {
     "home": "Home",
     "shop": "Shop",
+    "about": "About",
+    "contact": "Contact Us",
+    "profile": "Profile",
+    "categories": "Categories",
+    "offers": "Offers",
     "checkout": "Checkout",
     "dashboard": "Dashboard"
   },
 
   "hero": {
     "titleLine1": "Own Your",
-    "titleLine2": "Street Style",
+    "titleLine2": "Street",
+    "titleLine3": "Style",
     "subtitle": "Bold drops. Limited runs. Made for the culture.",
     "shopNow": "Shop the Drop",
     "exploreAll": "View Lookbook",

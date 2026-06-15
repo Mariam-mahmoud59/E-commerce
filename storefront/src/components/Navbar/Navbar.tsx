@@ -5,18 +5,12 @@ import { useCart } from '../../hooks/useCart';
 import { useAuth } from '../../hooks/AuthContext';
 import './Navbar.css';
 
-const COMMON_LINKS = [
-  { path: '/', key: 'nav.home' },
-  { path: '/shop', key: 'nav.shop' },
-  { path: '/checkout', key: 'nav.checkout' },
-];
-
 export function Navbar() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const { totalItems } = useCart();
-  const { isAuthenticated, logout, user } = useAuth();
+  const { isAuthenticated, user } = useAuth();
 
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -36,26 +30,63 @@ export function Navbar() {
   };
 
   const go = (path: string) => {
-    navigate(path);
+    if (path.startsWith('/#')) {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const id = path.substring(2);
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        const id = path.substring(2);
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(path);
+      window.scrollTo(0, 0);
+    }
     setDrawerOpen(false);
   };
 
-  const handleLogout = async () => {
-    await logout();
-    navigate('/');
-  };
 
-  const isActive = (path: string) =>
-    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
+
+  const isActive = (path: string) => {
+    if (path === '/') return location.pathname === '/' && !window.location.hash;
+    if (path.startsWith('/#')) return window.location.hash === path.substring(1);
+    return location.pathname.startsWith(path.split('?')[0]);
+  };
 
   const isAdmin = isAuthenticated && user?.roles?.includes('Admin');
 
-  const getLinks = () => {
-    const links = COMMON_LINKS.filter(l => !isAdmin || l.path === '/');
-    if (isAdmin) {
-      links.push({ path: '/dashboard', key: 'nav.dashboard' });
+  const getLinks = (isMobile: boolean = false) => {
+    if (isMobile) {
+      const links = [
+        { path: '/', key: 'nav.home', defaultText: 'Home' },
+        { path: '/shop', key: 'nav.categories', defaultText: 'Categories' },
+        { path: '/shop?offers=true', key: 'nav.offers', defaultText: 'Offers' },
+        { path: '/#contact', key: 'nav.contact', defaultText: 'Contact Us' }
+      ];
+      if (isAdmin) {
+        links.push({ path: '/dashboard', key: 'nav.dashboard', defaultText: 'Dashboard' });
+      }
+      if (isAuthenticated) {
+        links.push({ path: '/profile', key: 'nav.profile', defaultText: 'Profile' });
+      }
+      return links;
+    } else {
+      const links = [
+        { path: '/', key: 'nav.home', defaultText: 'Home' },
+        { path: '/#about', key: 'nav.about', defaultText: 'About' },
+        { path: '/#contact', key: 'nav.contact', defaultText: 'Contact Us' },
+      ];
+      if (isAdmin) {
+        links.push({ path: '/dashboard', key: 'nav.dashboard', defaultText: 'Dashboard' });
+      }
+      if (isAuthenticated) {
+        links.push({ path: '/profile', key: 'nav.profile', defaultText: 'Profile' });
+      }
+      return links;
     }
-    return links;
   };
 
   return (
@@ -64,40 +95,36 @@ export function Navbar() {
         <div className="navbar__inner">
           {/* Brand */}
           <button className="navbar__brand" onClick={() => go('/')}>
-            {t('brand')}
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px' }}>
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            {t('brand', 'THETATEACH STORE')}
           </button>
 
           {/* Desktop links */}
           <div className="navbar__links">
-            {getLinks().map(({ path, key }) => (
+            {getLinks(false).map(({ path, key, defaultText }) => (
               <button
                 key={path}
                 className={`navbar__link ${isActive(path) ? 'navbar__link--active' : ''}`}
                 onClick={() => go(path)}
               >
-                {t(key)}
+                {t(key, defaultText)}
               </button>
             ))}
-            
-            {/* Auth Actions inside Navbar Links for Desktop */}
-            {!isAuthenticated ? (
-              <>
-                <button className={`navbar__link ${isActive('/login') ? 'navbar__link--active' : ''}`} onClick={() => go('/login')}>
-                  {t('auth.login', 'Login')}
-                </button>
-                <button className={`navbar__link ${isActive('/register') ? 'navbar__link--active' : ''}`} onClick={() => go('/register')}>
-                  {t('auth.register', 'Register')}
-                </button>
-              </>
-            ) : (
-              <button className="navbar__link" onClick={handleLogout}>
-                {t('auth.logout', 'Logout')} ({user?.fullName})
-              </button>
-            )}
           </div>
 
           {/* Right actions */}
           <div className="navbar__actions">
+            <button className="navbar__icon-btn" onClick={() => go('/shop')}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+
             {!isAdmin && (
               <button className="navbar__cart-btn" onClick={() => go('/checkout')}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -107,6 +134,18 @@ export function Navbar() {
                 </svg>
                 <span className="navbar__cart-badge">{totalItems}</span>
               </button>
+            )}
+
+            {/* Auth Actions outside Navbar Links for Desktop */}
+            {!isAuthenticated && (
+              <div className="navbar__auth-buttons">
+                <button className="navbar__login-btn" onClick={() => go('/login')}>
+                  {t('auth.login', 'Sign in')}
+                </button>
+                <button className="navbar__register-btn" onClick={() => go('/register')}>
+                  {t('auth.register', 'Register')}
+                </button>
+              </div>
             )}
 
             <button className="navbar__lang-btn" onClick={toggleLang}>
@@ -133,29 +172,25 @@ export function Navbar() {
 
       {/* Mobile drawer */}
       <div className={`navbar__drawer ${drawerOpen ? 'navbar__drawer--open' : ''}`}>
-        {getLinks().map(({ path, key }) => (
+        {getLinks(true).map(({ path, key, defaultText }) => (
           <button
             key={path}
             className={`navbar__drawer-link ${isActive(path) ? 'navbar__drawer-link--active' : ''}`}
             onClick={() => go(path)}
           >
-            {t(key)}
+            {t(key, defaultText)}
           </button>
         ))}
-        
-        {!isAuthenticated ? (
+
+        {!isAuthenticated && (
           <>
             <button className={`navbar__drawer-link ${isActive('/login') ? 'navbar__drawer-link--active' : ''}`} onClick={() => go('/login')}>
-              {t('auth.login', 'Login')}
+              {t('auth.login', 'Sign in')}
             </button>
             <button className={`navbar__drawer-link ${isActive('/register') ? 'navbar__drawer-link--active' : ''}`} onClick={() => go('/register')}>
               {t('auth.register', 'Register')}
             </button>
           </>
-        ) : (
-          <button className="navbar__drawer-link" onClick={handleLogout}>
-            {t('auth.logout', 'Logout')}
-          </button>
         )}
       </div>
     </>

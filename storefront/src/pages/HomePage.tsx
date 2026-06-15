@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { RevealBox } from '../components/RevealBox/RevealBox';
 import { ProductCard } from '../components/ProductCard/ProductCard';
+import { ShiftButton } from '../components/ShiftButton/ShiftButton';
+import { Background3D } from '../components/Background3D/Background3D';
+import { NewArrivals } from '../components/NewArrivals/NewArrivals';
 import { Footer } from '../components/Footer/Footer';
 import { products } from '../data/products';
 import './HomePage.css';
@@ -12,14 +15,6 @@ const CARDS = [
   { id: 2, image: 'https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=800&auto=format&fit=crop' },
   { id: 3, image: 'https://images.unsplash.com/photo-1493225457124-a1a2a5956093?q=80&w=800&auto=format&fit=crop' },
   { id: 4, image: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=800&auto=format&fit=crop' },
-  { id: 5, image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop' },
-  { id: 6, image: 'https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=800&auto=format&fit=crop' },
-  { id: 7, image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop' },
-  { id: 8, image: 'https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=800&auto=format&fit=crop' },
-  { id: 9, image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop' },
-  { id: 10, image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop' },
-  { id: 11, image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop' },
-  { id: 12, image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop' },
 ];
 
 export function HomePage() {
@@ -69,11 +64,21 @@ export function HomePage() {
     };
   }, []);
 
+  useEffect(() => {
+    if (window.location.hash) {
+      setTimeout(() => {
+        const id = window.location.hash.replace('#', '');
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, []);
+
   return (
     <div className="page-enter">
       {/* ─── 3D LAYERED HERO ────────────────────────────────────── */}
       <section ref={containerRef} className="hero-3d-container">
         <div className="hero-3d-sticky">
+          <Background3D />
           <div className="hero__container">
             <div className="hero__grid">
               
@@ -81,19 +86,27 @@ export function HomePage() {
               <div className="hero__text-content">
                 <h1 className="hero__title">
                   <span className="text-reveal" style={{ animationDelay: '0.2s' }}>{t('hero.titleLine1')}</span>
-                  <br />
                   <span className="hero__title-gradient text-reveal" style={{ animationDelay: '0.4s' }}>{t('hero.titleLine2')}</span>
+                  <span className="hero__title-gradient text-reveal" style={{ animationDelay: '0.6s' }}>{t('hero.titleLine3')}</span>
                 </h1>
 
                 <p className="hero__subtitle text-reveal" style={{ animationDelay: '0.6s' }}>{t('hero.subtitle')}</p>
 
-                <div className="hero__ctas">
-                  <button className="hero__cta-primary" onClick={() => navigate('/shop')}>
-                    {t('hero.shopNow')}
-                  </button>
-                  <button className="hero__cta-secondary" onClick={() => navigate('/shop')}>
-                    {t('hero.exploreAll')}
-                  </button>
+                <div className="hero__ctas text-reveal" style={{ animationDelay: '0.8s', display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+                  <ShiftButton 
+                    variant="slide" 
+                    text={t('hero.shopNow', 'Shop Now')} 
+                    baseColor="var(--accent)" 
+                    textColor="var(--dark)" 
+                    onClick={() => navigate('/shop')} 
+                  />
+                  <ShiftButton 
+                    variant="right" 
+                    text={t('hero.exploreAll', 'Explore All')} 
+                    baseColor="#2a2a2a" 
+                    textColor="#ffffff" 
+                    onClick={() => navigate('/shop')} 
+                  />
                 </div>
               </div>
 
@@ -186,88 +199,8 @@ export function HomePage() {
         </div>
       </div>
 
-      {/* ─── COLLECTIONS ───────────────────────────────────────── */}
-      <section className="collections">
-        <div className="collections__inner">
-          <RevealBox>
-            <div className="collections__label">✦ {t('home.collectionsLabel')}</div>
-            <h2 className="collections__title">{t('home.collectionsTitle')}</h2>
-          </RevealBox>
-
-          <div className="collections__grid">
-            <RevealBox delay={0.1}>
-              <div className="collection-card" onClick={() => navigate('/shop?category=Tees')}>
-                <div className="collection-card__image">
-                  <img src="/images/collection-ceramics.jpg" alt="Tees" />
-                </div>
-                <h3 className="collection-card__title">{t('home.col1Title')}</h3>
-                <p className="collection-card__desc">{t('home.col1Desc')}</p>
-                <span className="collection-card__cta">{t('home.col1Cta')} →</span>
-              </div>
-            </RevealBox>
-            <RevealBox delay={0.2}>
-              <div className="collection-card" onClick={() => navigate('/shop?category=Hoodies')}>
-                <div className="collection-card__image">
-                  <img src="/images/collection-textiles.jpg" alt="Hoodies" />
-                </div>
-                <h3 className="collection-card__title">{t('home.col2Title')}</h3>
-                <p className="collection-card__desc">{t('home.col2Desc')}</p>
-                <span className="collection-card__cta">{t('home.col2Cta')} →</span>
-              </div>
-            </RevealBox>
-            <RevealBox delay={0.3}>
-              <div className="collection-card" onClick={() => navigate('/shop?category=Accessories')}>
-                <div className="collection-card__image">
-                  <img src="/images/collection-lighting.jpg" alt="Accessories" />
-                </div>
-                <h3 className="collection-card__title">{t('home.col3Title')}</h3>
-                <p className="collection-card__desc">{t('home.col3Desc')}</p>
-                <span className="collection-card__cta">{t('home.col3Cta')} →</span>
-              </div>
-            </RevealBox>
-          </div>
-        </div>
-      </section>
-
-      {/* ─── FEATURED PRODUCTS ─────────────────────────────────── */}
-      <section className="featured">
-        <div className="featured__inner">
-          <RevealBox>
-            <div className="featured__header">
-              <div>
-                <h2 className="featured__title">{t('product.featured')}</h2>
-              </div>
-              <button className="featured__explore-btn" onClick={() => navigate('/shop')}>
-                {t('hero.exploreAll')} →
-              </button>
-            </div>
-          </RevealBox>
-
-          <div className="featured__grid">
-            {products.map((p, i) => (
-              <ProductCard key={p.id} product={p} delay={i * 0.08} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── LOOKBOOK PARALLAX ─────────────────────────────────── */}
-      <section className="lookbook">
-        <div className="lookbook__sticky">
-          <img src="/images/parallax-flatlay.jpg" alt="Lookbook" className="lookbook__bg" />
-          
-          <div className={`lookbook__overlay ${isRtl ? 'lookbook__overlay--rtl' : 'lookbook__overlay--ltr'}`}>
-            <RevealBox>
-              <div className="lookbook__label">✦ {t('home.parallaxLabel')}</div>
-              <h2 className="lookbook__title">{t('home.parallaxTitle')}</h2>
-              <p className="lookbook__body">{t('home.parallaxBody')}</p>
-              <button className="lookbook__cta" onClick={() => navigate('/shop')}>
-                {t('home.parallaxCta')}
-              </button>
-            </RevealBox>
-          </div>
-        </div>
-      </section>
+      {/* ─── NEW ARRIVALS / FEATURED PRODUCTS ──────────────────── */}
+      <NewArrivals />
 
       {/* ─── CTA BANNER ────────────────────────────────────────── */}
       <section className="cta-banner">
@@ -275,9 +208,15 @@ export function HomePage() {
           <RevealBox>
             <h2 className="cta-banner__title">{t('home.ctaTitle')}</h2>
             <p className="cta-banner__subtitle">{t('home.ctaSubtitle')}</p>
-            <button className="cta-banner__btn" onClick={() => navigate('/register')}>
-              {t('home.ctaBtn')}
-            </button>
+            <div style={{ marginTop: '40px' }}>
+              <ShiftButton 
+                variant="left" 
+                text={t('home.ctaBtn', 'Join Now')} 
+                baseColor="var(--accent)" 
+                textColor="var(--dark)" 
+                onClick={() => navigate('/register')} 
+              />
+            </div>
           </RevealBox>
         </div>
       </section>
@@ -301,6 +240,29 @@ export function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ─── ABOUT SECTION ─────────────────────────────────────── */}
+      <section id="about" style={{ padding: '120px 20px', maxWidth: '1200px', margin: '0 auto', color: 'var(--light-text)', textAlign: 'center' }}>
+        <RevealBox>
+          <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>{t('nav.about', 'About Us')}</h2>
+          <p style={{ maxWidth: '600px', margin: '0 auto', lineHeight: '1.6' }}>
+            Thetateach Store brings you the best quality clothing and accessories. We focus on premium materials, ethical manufacturing, and cutting-edge designs to elevate your everyday style.
+          </p>
+        </RevealBox>
+      </section>
+
+      {/* ─── CONTACT SECTION ───────────────────────────────────── */}
+      <section id="contact" style={{ padding: '80px 20px 120px', maxWidth: '1200px', margin: '0 auto', color: 'var(--light-text)', textAlign: 'center' }}>
+        <RevealBox>
+          <h2 style={{ fontSize: '32px', marginBottom: '20px' }}>{t('nav.contact', 'Contact Us')}</h2>
+          <p style={{ maxWidth: '600px', margin: '0 auto', lineHeight: '1.6', marginBottom: '30px' }}>
+            Have a question? We're here to help. Reach out to our customer support team for inquiries about orders, returns, or product details.
+          </p>
+          <a href="mailto:support@thetateach.com" style={{ display: 'inline-block', padding: '12px 30px', background: 'var(--accent)', color: 'var(--dark)', fontWeight: '600', borderRadius: '30px', textDecoration: 'none' }}>
+            Email Support
+          </a>
+        </RevealBox>
       </section>
 
       <Footer />

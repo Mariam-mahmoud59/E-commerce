@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import './Footer.css';
 
@@ -48,10 +49,10 @@ export function Footer() {
           <div className="footer__col" style={{ transitionDelay: '0.2s' }}>
             <h4 className="footer__col-title">{t('footer.shop')}</h4>
             <ul className="footer__links">
-              <li><a href="/shop?category=Tees">{t('footer.shopTees')}</a></li>
-              <li><a href="/shop?category=Hoodies">{t('footer.shopHoodies')}</a></li>
-              <li><a href="/shop?category=Bottoms">{t('footer.shopBottoms')}</a></li>
-              <li><a href="/shop?category=Accessories">{t('footer.shopAccessories')}</a></li>
+              <li><Link to="/shop?category=Tees">{t('footer.shopTees')}</Link></li>
+              <li><Link to="/shop?category=Hoodies">{t('footer.shopHoodies')}</Link></li>
+              <li><Link to="/shop?category=Bottoms">{t('footer.shopBottoms')}</Link></li>
+              <li><Link to="/shop?category=Accessories">{t('footer.shopAccessories')}</Link></li>
             </ul>
           </div>
 
