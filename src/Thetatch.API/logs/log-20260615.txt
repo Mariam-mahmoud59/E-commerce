@@ -1658,3 +1658,23 @@ WHERE "Id" = @p1;
 2026-06-15 18:38:13.942 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Logout (Thetatch.API)'
 2026-06-15 18:38:13.942 +03:00 [INF] HTTP POST /api/auth/logout responded 204 in 21.6782 ms
 2026-06-15 18:38:13.942 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5191/api/auth/logout - 204 null null 22.4103ms
+2026-06-15 19:25:32.424 +03:00 [FTL] Application terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in W:\Thetatch\Work\E-commerce\src\Thetatch.API\Program.cs:line 139
+2026-06-15 19:25:39.404 +03:00 [FTL] Application terminated unexpectedly
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at System.Diagnostics.DiagnosticSource.Write[T](String name, T value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in W:\Thetatch\Work\E-commerce\src\Thetatch.API\Program.cs:line 139
