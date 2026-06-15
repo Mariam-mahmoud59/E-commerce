@@ -12,36 +12,38 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
 
         builder.HasIndex(p => p.Slug).IsUnique();
 
-        builder.OwnsOne(p => p.Name, name =>
-        {
-            name.ToJson();
-            name.Property(n => n.En).HasColumnName("Name_En");
-            name.Property(n => n.Ar).HasColumnName("Name_Ar");
-        });
+        builder.Property(p => p.Name)
+            .HasColumnType("jsonb")
+            .HasConversion(
+                v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                v => System.Text.Json.JsonSerializer.Deserialize<Thetatch.Domain.Common.LocalizedText>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Thetatch.Domain.Common.LocalizedText());
 
-        builder.OwnsOne(p => p.Description, desc =>
-        {
-            desc.ToJson();
-            desc.Property(d => d.En).HasColumnName("Description_En");
-            desc.Property(d => d.Ar).HasColumnName("Description_Ar");
-        });
+        builder.Property(p => p.Description)
+            .HasColumnType("jsonb")
+            .HasConversion(
+                v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                v => System.Text.Json.JsonSerializer.Deserialize<Thetatch.Domain.Common.LocalizedText>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Thetatch.Domain.Common.LocalizedText());
 
-        builder.OwnsOne(p => p.SeoTitle, seo =>
-        {
-            seo.ToJson();
-            seo.Property(s => s.En).HasColumnName("SeoTitle_En");
-            seo.Property(s => s.Ar).HasColumnName("SeoTitle_Ar");
-        });
+        builder.Property(p => p.SeoTitle)
+            .HasColumnType("jsonb")
+            .HasConversion(
+                v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                v => System.Text.Json.JsonSerializer.Deserialize<Thetatch.Domain.Common.LocalizedText>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Thetatch.Domain.Common.LocalizedText());
 
-        builder.OwnsOne(p => p.SeoDescription, seo =>
-        {
-            seo.ToJson();
-            seo.Property(s => s.En).HasColumnName("SeoDescription_En");
-            seo.Property(s => s.Ar).HasColumnName("SeoDescription_Ar");
-        });
+        builder.Property(p => p.SeoDescription)
+            .HasColumnType("jsonb")
+            .HasConversion(
+                v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                v => System.Text.Json.JsonSerializer.Deserialize<Thetatch.Domain.Common.LocalizedText>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Thetatch.Domain.Common.LocalizedText());
 
         builder.Property(p => p.BasePrice).HasColumnType("decimal(18,2)");
         builder.Property(p => p.CompareAtPrice).HasColumnType("decimal(18,2)");
+
+        builder.Property(p => p.Metadata)
+            .HasColumnType("jsonb")
+            .HasConversion(
+                v => v != null ? System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null) : null,
+                v => v != null ? System.Text.Json.JsonDocument.Parse(v, new System.Text.Json.JsonDocumentOptions()) : null);
 
         builder.HasOne(p => p.Category)
             .WithMany(c => c.Products)

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Thetatch.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a2a996e9d28b18209e3bf0b70d99d36aa966ab3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80e3f075f86a1f5b7a50e482534f0497f698455b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Thetatch.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Thetatch.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -4,14 +4,331 @@
     "W:\\Thetatch\\Work\\E-commerce\\tests\\Thetatch.IntegrationTests\\Thetatch.IntegrationTests.csproj": {}
   },
   "projects": {
-    "W:\\Thetatch\\Work\\E-commerce\\tests\\Thetatch.IntegrationTests\\Thetatch.IntegrationTests.csproj": {
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\tests\\Thetatch.IntegrationTests\\Thetatch.IntegrationTests.csproj",
-        "projectName": "Thetatch.IntegrationTests",
-        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\tests\\Thetatch.IntegrationTests\\Thetatch.IntegrationTests.csproj",
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
+        "projectName": "Thetatch.API",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
         "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
-        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\tests\\Thetatch.IntegrationTests\\obj\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj"
+              },
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj"
+              },
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.23, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj",
+        "projectName": "Thetatch.Application",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj",
+        "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj"
+              },
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj",
+        "projectName": "Thetatch.Domain",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj",
+        "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj",
+        "projectName": "Thetatch.Infrastructure",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj"
+              },
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj",
+        "projectName": "Thetatch.SharedKernel",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj",
+        "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,7 +359,77 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "W:\\Thetatch\\Work\\E-commerce\\tests\\Thetatch.IntegrationTests\\Thetatch.IntegrationTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\tests\\Thetatch.IntegrationTests\\Thetatch.IntegrationTests.csproj",
+        "projectName": "Thetatch.IntegrationTests",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\tests\\Thetatch.IntegrationTests\\Thetatch.IntegrationTests.csproj",
+        "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\tests\\Thetatch.IntegrationTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {}
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {}
   },
   "projects": {
-    "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj",
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj",
         "projectName": "Thetatch.Application",
-        "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj",
         "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
-        "outputPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\obj\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,11 +26,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj": {
-                "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj"
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj"
               },
-              "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
-                "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj": {
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj",
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj",
         "projectName": "Thetatch.Domain",
-        "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj",
         "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
-        "outputPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\obj\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -101,8 +101,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
-                "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
               }
             }
           }
@@ -147,14 +147,14 @@
         }
       }
     },
-    "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj",
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj",
         "projectName": "Thetatch.Infrastructure",
-        "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
-        "outputPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\obj\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -169,11 +169,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
-                "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj"
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj"
               },
-              "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj": {
-                "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj"
+              "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj": {
+                "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Domain\\Thetatch.Domain.csproj"
               }
             }
           }
@@ -226,14 +226,14 @@
         }
       }
     },
-    "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
+    "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj",
+        "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj",
         "projectName": "Thetatch.SharedKernel",
-        "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj",
+        "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
-        "outputPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\obj\\",
+        "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -15,6 +15,26 @@
           }
         }
       },
+      "FluentValidation.AspNetCore/11.3.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "11.11.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.11.0"
+        },
+        "compile": {
+          "lib/net6.0/FluentValidation.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "FluentValidation.DependencyInjectionExtensions/12.1.1": {
         "type": "package",
         "dependencies": {
@@ -1286,6 +1306,25 @@
         "fluentvalidation.nuspec",
         "lib/net8.0/FluentValidation.dll",
         "lib/net8.0/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.AspNetCore/11.3.1": {
+      "sha512": "FjkfrGGwC+25oH8QpX1ti3gxkFjDDtotkAQWyQz2CkwQwEfRKTANjhh77I79kY8dov2ydK1SY+e4jiOWsbbDdQ==",
+      "type": "package",
+      "path": "fluentvalidation.aspnetcore/11.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+        "fluentvalidation.aspnetcore.nuspec",
+        "lib/net5.0/FluentValidation.AspNetCore.dll",
+        "lib/net5.0/FluentValidation.AspNetCore.xml",
+        "lib/net6.0/FluentValidation.AspNetCore.dll",
+        "lib/net6.0/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
       ]
     },
     "FluentValidation.DependencyInjectionExtensions/12.1.1": {
@@ -3338,6 +3377,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "FluentValidation.AspNetCore >= 11.3.1",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.2",
       "Microsoft.AspNetCore.OpenApi >= 8.0.23",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.2",
@@ -3353,11 +3393,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
+      "projectUniqueName": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
       "projectName": "Thetatch.API",
-      "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
+      "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\Thetatch.API.csproj",
       "packagesPath": "C:\\Users\\Mariam\\.nuget\\packages\\",
-      "outputPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\obj\\",
+      "outputPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mariam\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3372,14 +3412,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
-              "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj"
+            "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj": {
+              "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Application\\Thetatch.Application.csproj"
             },
-            "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {
-              "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj"
+            "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj": {
+              "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.Infrastructure\\Thetatch.Infrastructure.csproj"
             },
-            "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
-              "projectPath": "w:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
+            "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj": {
+              "projectPath": "W:\\Thetatch\\Work\\E-commerce\\src\\Thetatch.SharedKernel\\Thetatch.SharedKernel.csproj"
             }
           }
         }
@@ -3399,6 +3439,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "FluentValidation.AspNetCore": {
+            "target": "Package",
+            "version": "[11.3.1, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[8.0.2, )"

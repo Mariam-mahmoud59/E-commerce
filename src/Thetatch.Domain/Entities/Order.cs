@@ -30,7 +30,8 @@ public class Order : BaseEntity
     public string? Notes { get; set; }
     
     public string IdempotencyKey { get; set; } = string.Empty;
-    
+    public bool StockDecremented { get; set; }
+
     public ICollection<OrderItem> Items { get; set; } = new List<OrderItem>();
     public ICollection<OrderStatusHistory> StatusHistory { get; set; } = new List<OrderStatusHistory>();
 }

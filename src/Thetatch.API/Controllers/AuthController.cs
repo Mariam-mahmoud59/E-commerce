@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Thetatch.Application.DTOs.Auth;
 using Thetatch.Application.Interfaces;
@@ -30,6 +31,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
+    [EnableRateLimiting("AuthEndpoints")]
     public async Task<IActionResult> Register(RegisterRequest request)
     {
         var user = new ApplicationUser
@@ -54,6 +56,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("login")]
+    [EnableRateLimiting("AuthEndpoints")]
     public async Task<IActionResult> Login(LoginRequest request)
     {
         var user = await _userManager.FindByEmailAsync(request.Email);
@@ -153,7 +156,7 @@ public class AuthController : ControllerBase
         {
             HttpOnly = true,
             Expires = DateTime.UtcNow.AddDays(7),
-            Secure = true,
+            Secure = Request.IsHttps,
             SameSite = SameSiteMode.Strict
         };
         Response.Cookies.Append("refreshToken", token, cookieOptions);

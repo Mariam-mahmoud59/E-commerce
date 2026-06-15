@@ -11,19 +11,18 @@ namespace Thetatch.API.Controllers;
 public class ProductsController : ControllerBase
 {
     private readonly IApplicationDbContext _context;
+    private readonly ICurrentLanguageService _languageService;
 
-    public ProductsController(IApplicationDbContext context)
+    public ProductsController(IApplicationDbContext context, ICurrentLanguageService languageService)
     {
         _context = context;
+        _languageService = languageService;
     }
 
     [HttpGet]
     public async Task<ActionResult<List<ProductResponse>>> GetProducts([FromQuery] string? categorySlug)
     {
-        var language = Request.Headers.AcceptLanguage.ToString().Split(',').FirstOrDefault()?.Split(';').FirstOrDefault()?.ToLower() ?? "en";
-        // fallback to just "en" or "ar"
-        if (!language.StartsWith("ar")) language = "en";
-        else language = "ar";
+        var language = _languageService.Language;
 
         var query = _context.Products
             .Include(p => p.Category)
@@ -76,9 +75,7 @@ public class ProductsController : ControllerBase
     [HttpGet("{slug}")]
     public async Task<ActionResult<ProductResponse>> GetProduct(string slug)
     {
-        var language = Request.Headers.AcceptLanguage.ToString().Split(',').FirstOrDefault()?.Split(';').FirstOrDefault()?.ToLower() ?? "en";
-        if (!language.StartsWith("ar")) language = "en";
-        else language = "ar";
+        var language = _languageService.Language;
 
         var p = await _context.Products
             .Include(x => x.Category)

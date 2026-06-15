@@ -12,19 +12,17 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
 
         builder.HasIndex(c => c.Slug).IsUnique();
 
-        builder.OwnsOne(c => c.Name, name =>
-        {
-            name.ToJson();
-            name.Property(n => n.En).HasColumnName("Name_En");
-            name.Property(n => n.Ar).HasColumnName("Name_Ar");
-        });
+        builder.Property(c => c.Name)
+            .HasColumnType("jsonb")
+            .HasConversion(
+                v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                v => System.Text.Json.JsonSerializer.Deserialize<Thetatch.Domain.Common.LocalizedText>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Thetatch.Domain.Common.LocalizedText());
 
-        builder.OwnsOne(c => c.Description, desc =>
-        {
-            desc.ToJson();
-            desc.Property(d => d.En).HasColumnName("Description_En");
-            desc.Property(d => d.Ar).HasColumnName("Description_Ar");
-        });
+        builder.Property(c => c.Description)
+            .HasColumnType("jsonb")
+            .HasConversion(
+                v => System.Text.Json.JsonSerializer.Serialize(v, (System.Text.Json.JsonSerializerOptions?)null),
+                v => System.Text.Json.JsonSerializer.Deserialize<Thetatch.Domain.Common.LocalizedText>(v, (System.Text.Json.JsonSerializerOptions?)null) ?? new Thetatch.Domain.Common.LocalizedText());
 
         builder.HasOne(c => c.ParentCategory)
             .WithMany(c => c.SubCategories)

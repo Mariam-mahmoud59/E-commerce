@@ -28,21 +28,39 @@
 
 /* ─── DESKTOP LINKS ────────────────────────────────────────────────── */
 .navbar__links {
-  display: flex; gap: 32px; align-items: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(40, 40, 40, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .navbar__link {
-  background: none; border: none; cursor: pointer;
-  font-family: var(--font-body); font-weight: 500; font-size: 14px;
-  color: var(--light-text); opacity: 0.72;
-  letter-spacing: 0.04em;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
-  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+  padding: 10px 22px;
+  border-radius: 999px;
 }
-.navbar__link:hover { opacity: 1; }
+.navbar__link:hover { 
+  background: rgba(255, 255, 255, 0.1); 
+}
 .navbar__link--active {
-  color: var(--accent); opacity: 1;
-  border-bottom-color: var(--accent);
+  background: #FFFFFF;
+  color: #111111;
+}
+.navbar__link--active:hover {
+  background: #FFFFFF;
 }
 
 /* ─── ACTIONS ──────────────────────────────────────────────────────── */

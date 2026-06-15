@@ -10,18 +10,18 @@ namespace Thetatch.API.Controllers;
 public class CategoriesController : ControllerBase
 {
     private readonly IApplicationDbContext _context;
+    private readonly ICurrentLanguageService _languageService;
 
-    public CategoriesController(IApplicationDbContext context)
+    public CategoriesController(IApplicationDbContext context, ICurrentLanguageService languageService)
     {
         _context = context;
+        _languageService = languageService;
     }
 
     [HttpGet]
     public async Task<ActionResult<List<CategoryResponse>>> GetCategories()
     {
-        var language = Request.Headers.AcceptLanguage.ToString().Split(',').FirstOrDefault()?.Split(';').FirstOrDefault()?.ToLower() ?? "en";
-        if (!language.StartsWith("ar")) language = "en";
-        else language = "ar";
+        var language = _languageService.Language;
 
         var categories = await _context.Categories
             .Where(c => c.IsActive)

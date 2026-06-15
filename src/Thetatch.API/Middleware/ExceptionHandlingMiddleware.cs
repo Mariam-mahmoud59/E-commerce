@@ -29,21 +29,37 @@ public class ExceptionHandlingMiddleware
 
     private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
-        var (statusCode, title) = exception switch
-        {
-            DomainException => (StatusCodes.Status400BadRequest, "Domain Error"),
-            _ => (StatusCodes.Status500InternalServerError, "Server Error")
-        };
-
         var problemDetails = new ProblemDetails
         {
-            Status = statusCode,
-            Title = title,
-            Detail = exception.Message,
             Type = "https://tools.ietf.org/html/rfc7231#section-6.6.1"
         };
 
-        context.Response.StatusCode = statusCode;
+        switch (exception)
+        {
+            case FluentValidation.ValidationException validationEx:
+                problemDetails.Status = StatusCodes.Status400BadRequest;
+                problemDetails.Title = "Validation Error";
+                problemDetails.Detail = "One or more validation errors occurred.";
+                problemDetails.Extensions["errors"] = validationEx.Errors
+                    .GroupBy(x => x.PropertyName)
+                    .ToDictionary(
+                        g => g.Key,
+                        g => g.Select(x => x.ErrorMessage).ToArray()
+                    );
+                break;
+            case DomainException domainEx:
+                problemDetails.Status = StatusCodes.Status400BadRequest;
+                problemDetails.Title = "Domain Error";
+                problemDetails.Detail = domainEx.Message;
+                break;
+            default:
+                problemDetails.Status = StatusCodes.Status500InternalServerError;
+                problemDetails.Title = "Server Error";
+                problemDetails.Detail = exception.Message;
+                break;
+        }
+
+        context.Response.StatusCode = problemDetails.Status.Value;
         context.Response.ContentType = "application/problem+json";
 
         await context.Response.WriteAsJsonAsync(problemDetails);

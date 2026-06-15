@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Thetatch.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c03948e9a0fc55310f4565a0ee97d31f568133f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80e3f075f86a1f5b7a50e482534f0497f698455b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Thetatch.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Thetatch.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
