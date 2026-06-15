@@ -25,7 +25,8 @@ public class ProductsControllerTests
         
         // Assert
         response.EnsureSuccessStatusCode();
-        var products = await response.Content.ReadFromJsonAsync<List<ProductResponse>>();
+        var result = await response.Content.ReadFromJsonAsync<Thetatch.SharedKernel.PagedResult<ProductResponse>>();
+        var products = result?.Items;
         
         Assert.NotNull(products);
         Assert.NotEmpty(products);
@@ -44,7 +45,8 @@ public class ProductsControllerTests
         
         // Assert
         response.EnsureSuccessStatusCode();
-        var products = await response.Content.ReadFromJsonAsync<List<ProductResponse>>();
+        var result = await response.Content.ReadFromJsonAsync<Thetatch.SharedKernel.PagedResult<ProductResponse>>();
+        var products = result?.Items;
         
         Assert.NotNull(products);
         Assert.NotEmpty(products);

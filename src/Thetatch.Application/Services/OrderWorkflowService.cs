@@ -128,7 +128,7 @@ public class OrderWorkflowService
             throw new DomainException($"Invalid status transition from {oldStatus} to {newStatus}");
         }
 
-        if (newStatus == OrderStatus.Processing && !order.StockDecremented)
+        if ((newStatus == OrderStatus.Processing || newStatus == OrderStatus.Paid) && !order.StockDecremented)
         {
             await DecrementStockAsync(order, cancellationToken);
             order.StockDecremented = true;

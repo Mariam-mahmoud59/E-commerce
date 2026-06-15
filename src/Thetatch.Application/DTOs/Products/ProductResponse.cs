@@ -24,7 +24,7 @@ public class ProductVariantResponse
     public string? Size { get; set; }
     public string? Color { get; set; }
     public decimal? PriceOverride { get; set; }
-    public int StockQuantity { get; set; }
+    public Thetatch.Domain.Enums.StockStatus StockStatus { get; set; }
 }
 
 public class ProductImageResponse

@@ -8,15 +8,19 @@ using Thetatch.Application.DTOs.Orders;
 using Thetatch.Application.DTOs.Products;
 using Thetatch.Domain.Enums;
 
+using Microsoft.Extensions.DependencyInjection;
+
 namespace Thetatch.IntegrationTests.Controllers;
 
 [Collection("Integration")]
 public class OrderFlowTests
 {
     private readonly HttpClient _client;
+    private readonly CustomWebApplicationFactory<Program> _factory;
 
     public OrderFlowTests(CustomWebApplicationFactory<Program> factory)
     {
+        _factory = factory;
         _client = factory.CreateClient(new WebApplicationFactoryClientOptions
         {
             HandleCookies = false
@@ -163,8 +167,8 @@ public class OrderFlowTests
     {
         var response = await _client.GetAsync("/api/v1/products");
         response.EnsureSuccessStatusCode();
-        var products = await response.Content.ReadFromJsonAsync<List<ProductResponse>>();
-        var variantId = products!
+        var pagedResult = await response.Content.ReadFromJsonAsync<Thetatch.SharedKernel.PagedResult<ProductResponse>>();
+        var variantId = pagedResult!.Items
             .SelectMany(p => p.Variants)
             .Select(v => v.Id)
             .FirstOrDefault();
@@ -175,13 +179,10 @@ public class OrderFlowTests
 
     private async Task<int> GetVariantStockAsync(Guid variantId)
     {
-        var response = await _client.GetAsync("/api/v1/products");
-        response.EnsureSuccessStatusCode();
-        var products = await response.Content.ReadFromJsonAsync<List<ProductResponse>>();
-        return products!
-            .SelectMany(p => p.Variants)
-            .First(v => v.Id == variantId)
-            .StockQuantity;
+        using var scope = _factory.Services.CreateScope();
+        var context = scope.ServiceProvider.GetRequiredService<Thetatch.Infrastructure.Data.ApplicationDbContext>();
+        var variant = await context.ProductVariants.FindAsync(variantId);
+        return variant!.StockQuantity;
     }
 
     private async Task AddCartItemAsync(string token, Guid variantId, int quantity)

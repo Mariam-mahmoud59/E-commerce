@@ -20,7 +20,14 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<ProductResponse>>> GetProducts([FromQuery] string? categorySlug)
+    public async Task<ActionResult<Thetatch.SharedKernel.PagedResult<ProductResponse>>> GetProducts(
+        [FromQuery] string? categorySlug,
+        [FromQuery] string? search,
+        [FromQuery] decimal? minPrice,
+        [FromQuery] decimal? maxPrice,
+        [FromQuery] string? sortBy,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20)
     {
         var language = _languageService.Language;
 
@@ -36,9 +43,41 @@ public class ProductsController : ControllerBase
             query = query.Where(p => p.Category.Slug == categorySlug);
         }
 
-        var products = await query.ToListAsync();
+        if (minPrice.HasValue)
+        {
+            query = query.Where(p => p.BasePrice >= minPrice.Value);
+        }
 
-        var response = products.Select(p => new ProductResponse
+        if (maxPrice.HasValue)
+        {
+            query = query.Where(p => p.BasePrice <= maxPrice.Value);
+        }
+
+        if (!string.IsNullOrEmpty(search))
+        {
+            var langKey = language.ToLower() == "ar" ? "Ar" : "En";
+            query = query.Where(p => EF.Functions.ILike(
+                EF.Property<string>(p, "Name"),
+                $"%\"{langKey}\":\"%{search}%\"%"));
+        }
+
+        query = sortBy?.ToLower() switch
+        {
+            "price_asc" => query.OrderBy(p => p.BasePrice),
+            "price_desc" => query.OrderByDescending(p => p.BasePrice),
+            "newest" => query.OrderByDescending(p => p.CreatedAt),
+            "name" => query.OrderBy(p => EF.Property<string>(p, "Name")),
+            _ => query.OrderByDescending(p => p.CreatedAt)
+        };
+
+        var totalCount = await query.CountAsync();
+
+        var products = await query
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+        var items = products.Select(p => new ProductResponse
         {
             Id = p.Id,
             Slug = p.Slug,
@@ -65,11 +104,19 @@ public class ProductsController : ControllerBase
                 Size = v.Size,
                 Color = v.Color,
                 PriceOverride = v.PriceOverride,
-                StockQuantity = v.StockQuantity
+                StockStatus = v.StockQuantity > v.LowStockThreshold ? Domain.Enums.StockStatus.InStock :
+                              v.StockQuantity > 0 ? Domain.Enums.StockStatus.LowStock :
+                              Domain.Enums.StockStatus.OutOfStock
             }).ToList()
         }).ToList();
 
-        return Ok(response);
+        return Ok(new Thetatch.SharedKernel.PagedResult<ProductResponse>
+        {
+            Items = items,
+            TotalCount = totalCount,
+            Page = page,
+            PageSize = pageSize
+        });
     }
 
     [HttpGet("{slug}")]
@@ -112,7 +159,9 @@ public class ProductsController : ControllerBase
                 Size = v.Size,
                 Color = v.Color,
                 PriceOverride = v.PriceOverride,
-                StockQuantity = v.StockQuantity
+                StockStatus = v.StockQuantity > v.LowStockThreshold ? Domain.Enums.StockStatus.InStock :
+                              v.StockQuantity > 0 ? Domain.Enums.StockStatus.LowStock :
+                              Domain.Enums.StockStatus.OutOfStock
             }).ToList()
         };
 

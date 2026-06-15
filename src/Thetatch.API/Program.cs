@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using System.Text;
+using Serilog;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -16,19 +17,38 @@ using Thetatch.Infrastructure.Services;
 using Thetatch.API.Services;
 using Thetatch.Application.Services;
 
-var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .CreateBootstrapLogger();
 
-// Add services to the container.
-builder.Services.AddControllers();
+try
+{
+    var builder = WebApplication.CreateBuilder(args);
 
-// Configure Entity Framework Core with PostgreSQL
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    builder.Host.UseSerilog((context, services, configuration) => configuration
+        .ReadFrom.Configuration(context.Configuration)
+        .ReadFrom.Services(services)
+        .Enrich.FromLogContext()
+        .WriteTo.Console()
+        .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day));
+
+    // Add services to the container.
+    builder.Services.AddControllers();
+
+    // Configure Entity Framework Core with PostgreSQL
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    {
+        var connString = builder.Configuration.GetConnectionString("DefaultConnection") 
+            ?? throw new InvalidOperationException("Missing DefaultConnection");
+        options.UseNpgsql(connString, npgsqlOptions => 
+            npgsqlOptions.EnableRetryOnFailure(maxRetryCount: 3, maxRetryDelay: TimeSpan.FromSeconds(5), errorCodesToAdd: null));
+    });
 
 builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 builder.Services.AddScoped<ICurrentLanguageService, CurrentLanguageService>();
 builder.Services.AddScoped<OrderWorkflowService>();
+builder.Services.AddScoped<IImageStorageService, LocalDiskImageStorageService>();
 
 // Configure FluentValidation
 builder.Services.AddFluentValidationAutoValidation();
@@ -78,10 +98,30 @@ builder.Services.AddRateLimiter(options =>
         policy.QueueLimit = 0;
         policy.AutoReplenishment = true;
     });
+
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            factory: partition => new FixedWindowRateLimiterOptions
+            {
+                AutoReplenishment = true,
+                PermitLimit = 100,
+                QueueLimit = 0,
+                Window = TimeSpan.FromMinutes(1)
+            }));
 });
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var connString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Missing DefaultConnection");
+builder.Services.AddHealthChecks()
+    .AddNpgSql(connString);
+
+builder.Services.AddResponseCompression(options =>
+{
+    options.EnableForHttps = true;
+});
 
 // Configure CORS
 var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? ["http://localhost:5173"];
@@ -149,6 +189,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else if (!app.Environment.IsEnvironment("Testing"))
+{
+    app.UseHsts();
+}
+
+app.UseSerilogRequestLogging();
+app.UseResponseCompression();
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseMiddleware<LanguageMiddleware>();
@@ -166,7 +213,18 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHealthChecks("/health");
 
 app.Run();
+
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
 
 public partial class Program { }

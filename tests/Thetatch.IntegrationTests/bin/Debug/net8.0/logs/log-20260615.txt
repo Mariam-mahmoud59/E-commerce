@@ -1,0 +1,379 @@
+2026-06-15 13:53:09.607 +03:00 [INF] Saved 0 entities to in-memory store.
+2026-06-15 13:53:09.999 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:10.013 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:10.044 +03:00 [INF] User profile is available. Using 'C:\Users\Mariam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-15 13:53:10.324 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:10.388 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:10.610 +03:00 [INF] Saved 5 entities to in-memory store.
+2026-06-15 13:53:10.662 +03:00 [INF] Saved 3 entities to in-memory store.
+2026-06-15 13:53:11.004 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 53
+2026-06-15 13:53:11.155 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:11.178 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Thetatch.Application.DTOs.Auth.LoginRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:11.528 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:11.540 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:11.565 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Login (Thetatch.API) in 382.6667ms
+2026-06-15 13:53:11.569 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:11.572 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 534.9185 ms
+2026-06-15 13:53:11.578 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 200 null application/json; charset=utf-8 576.2261ms
+2026-06-15 13:53:11.588 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/adminorders - null null
+2026-06-15 13:53:11.638 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AdminOrdersController.GetOrders (Thetatch.API)'
+2026-06-15 13:53:11.644 +03:00 [INF] Route matched with {action = "GetOrders", controller = "AdminOrders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Thetatch.Application.DTOs.Orders.OrderResponse]]] GetOrders() on controller Thetatch.API.Controllers.AdminOrdersController (Thetatch.API).
+2026-06-15 13:53:11.730 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Thetatch.Application.DTOs.Orders.OrderResponse, Thetatch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-15 13:53:11.767 +03:00 [INF] Executed action Thetatch.API.Controllers.AdminOrdersController.GetOrders (Thetatch.API) in 122.4011ms
+2026-06-15 13:53:11.767 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AdminOrdersController.GetOrders (Thetatch.API)'
+2026-06-15 13:53:11.767 +03:00 [INF] HTTP GET /api/adminorders responded 200 in 176.6779 ms
+2026-06-15 13:53:11.768 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/adminorders - 200 null application/json; charset=utf-8 179.4056ms
+2026-06-15 13:53:11.789 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 158
+2026-06-15 13:53:11.794 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:11.800 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Thetatch.Application.DTOs.Auth.RegisterRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:11.921 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:11.924 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:11.925 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-15 13:53:11.936 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Register (Thetatch.API) in 135.9495ms
+2026-06-15 13:53:11.936 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:11.936 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 145.9329 ms
+2026-06-15 13:53:11.936 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 147.5923ms
+2026-06-15 13:53:11.938 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 85
+2026-06-15 13:53:11.939 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:11.939 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Thetatch.Application.DTOs.Auth.LoginRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:12.053 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:12.053 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:12.054 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Login (Thetatch.API) in 114.5269ms
+2026-06-15 13:53:12.054 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:12.054 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 115.5232 ms
+2026-06-15 13:53:12.054 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 200 null application/json; charset=utf-8 116.1111ms
+2026-06-15 13:53:12.064 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 160
+2026-06-15 13:53:12.065 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:12.065 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Thetatch.Application.DTOs.Auth.RegisterRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:12.175 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:12.176 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:12.177 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-15 13:53:12.178 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Register (Thetatch.API) in 112.2422ms
+2026-06-15 13:53:12.178 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:12.178 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 113.0877 ms
+2026-06-15 13:53:12.178 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 113.5957ms
+2026-06-15 13:53:12.179 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 87
+2026-06-15 13:53:12.180 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:12.180 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Thetatch.Application.DTOs.Auth.LoginRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:12.292 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:12.292 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:12.292 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Login (Thetatch.API) in 112.4895ms
+2026-06-15 13:53:12.293 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:12.293 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 113.2521 ms
+2026-06-15 13:53:12.293 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 200 null application/json; charset=utf-8 113.6026ms
+2026-06-15 13:53:12.293 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/refresh - null null
+2026-06-15 13:53:12.294 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Refresh (Thetatch.API)'
+2026-06-15 13:53:12.298 +03:00 [INF] Route matched with {action = "Refresh", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Refresh() on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:12.363 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:12.363 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:12.364 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Refresh (Thetatch.API) in 65.5076ms
+2026-06-15 13:53:12.364 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Refresh (Thetatch.API)'
+2026-06-15 13:53:12.364 +03:00 [INF] HTTP POST /api/auth/refresh responded 200 in 70.6018 ms
+2026-06-15 13:53:12.364 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/refresh - 200 null application/json; charset=utf-8 71.0008ms
+2026-06-15 13:53:12.369 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 167
+2026-06-15 13:53:12.370 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:12.370 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Thetatch.Application.DTOs.Auth.RegisterRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:12.469 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:12.471 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:12.472 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-15 13:53:12.473 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Register (Thetatch.API) in 102.8326ms
+2026-06-15 13:53:12.473 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:12.473 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 103.8078 ms
+2026-06-15 13:53:12.474 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 104.3311ms
+2026-06-15 13:53:12.477 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 161
+2026-06-15 13:53:12.478 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:12.478 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Thetatch.Application.DTOs.Auth.RegisterRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:12.584 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:12.585 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:12.585 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-15 13:53:12.586 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Register (Thetatch.API) in 108.554ms
+2026-06-15 13:53:12.587 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:12.587 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 109.3369 ms
+2026-06-15 13:53:12.587 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 109.8979ms
+2026-06-15 13:53:12.588 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 88
+2026-06-15 13:53:12.589 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:12.589 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Thetatch.Application.DTOs.Auth.LoginRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:12.695 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:12.696 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:12.696 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Login (Thetatch.API) in 107.1001ms
+2026-06-15 13:53:12.696 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:12.696 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 107.8682 ms
+2026-06-15 13:53:12.697 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 200 null application/json; charset=utf-8 108.3343ms
+2026-06-15 13:53:12.697 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/adminorders - null null
+2026-06-15 13:53:12.700 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2026-06-15 13:53:12.702 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-06-15 13:53:12.702 +03:00 [INF] HTTP GET /api/adminorders responded 403 in 5.1027 ms
+2026-06-15 13:53:12.703 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/adminorders - 403 null null 5.443ms
+2026-06-15 13:53:12.730 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/categories - null null
+2026-06-15 13:53:12.731 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.CategoriesController.GetCategories (Thetatch.API)'
+2026-06-15 13:53:12.736 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.SharedKernel.PagedResult`1[Thetatch.Application.DTOs.Categories.CategoryResponse]]] GetCategories(Int32, Int32) on controller Thetatch.API.Controllers.CategoriesController (Thetatch.API).
+2026-06-15 13:53:12.778 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.SharedKernel.PagedResult`1[[Thetatch.Application.DTOs.Categories.CategoryResponse, Thetatch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-15 13:53:12.793 +03:00 [INF] Executed action Thetatch.API.Controllers.CategoriesController.GetCategories (Thetatch.API) in 56.5757ms
+2026-06-15 13:53:12.793 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.CategoriesController.GetCategories (Thetatch.API)'
+2026-06-15 13:53:12.794 +03:00 [INF] HTTP GET /api/v1/categories responded 200 in 63.0322 ms
+2026-06-15 13:53:12.794 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/categories - 200 null application/json; charset=utf-8 63.726ms
+2026-06-15 13:53:12.808 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/categories - null null
+2026-06-15 13:53:12.810 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.CategoriesController.GetCategories (Thetatch.API)'
+2026-06-15 13:53:12.810 +03:00 [INF] Route matched with {action = "GetCategories", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.SharedKernel.PagedResult`1[Thetatch.Application.DTOs.Categories.CategoryResponse]]] GetCategories(Int32, Int32) on controller Thetatch.API.Controllers.CategoriesController (Thetatch.API).
+2026-06-15 13:53:12.812 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.SharedKernel.PagedResult`1[[Thetatch.Application.DTOs.Categories.CategoryResponse, Thetatch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-15 13:53:12.813 +03:00 [INF] Executed action Thetatch.API.Controllers.CategoriesController.GetCategories (Thetatch.API) in 2.4119ms
+2026-06-15 13:53:12.813 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.CategoriesController.GetCategories (Thetatch.API)'
+2026-06-15 13:53:12.813 +03:00 [INF] HTTP GET /api/v1/categories responded 200 in 3.5958 ms
+2026-06-15 13:53:12.813 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/categories - 200 null application/json; charset=utf-8 5.3878ms
+2026-06-15 13:53:12.818 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 158
+2026-06-15 13:53:12.818 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:12.819 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Thetatch.Application.DTOs.Auth.RegisterRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:12.918 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:12.922 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:12.922 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-15 13:53:12.923 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Register (Thetatch.API) in 104.1062ms
+2026-06-15 13:53:12.923 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:12.923 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 105.0174 ms
+2026-06-15 13:53:12.924 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 105.7264ms
+2026-06-15 13:53:12.926 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 85
+2026-06-15 13:53:12.927 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:12.927 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Thetatch.Application.DTOs.Auth.LoginRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:13.043 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:13.044 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:13.044 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Login (Thetatch.API) in 117.0173ms
+2026-06-15 13:53:13.044 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:13.044 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 117.7107 ms
+2026-06-15 13:53:13.045 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 200 null application/json; charset=utf-8 118.3242ms
+2026-06-15 13:53:13.047 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/products - null null
+2026-06-15 13:53:13.048 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:13.054 +03:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.SharedKernel.PagedResult`1[Thetatch.Application.DTOs.Products.ProductResponse]]] GetProducts(System.String, System.String, System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal], System.String, Int32, Int32) on controller Thetatch.API.Controllers.ProductsController (Thetatch.API).
+2026-06-15 13:53:13.163 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.SharedKernel.PagedResult`1[[Thetatch.Application.DTOs.Products.ProductResponse, Thetatch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-15 13:53:13.185 +03:00 [INF] Executed action Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API) in 130.5888ms
+2026-06-15 13:53:13.186 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:13.186 +03:00 [INF] HTTP GET /api/v1/products responded 200 in 138.2835 ms
+2026-06-15 13:53:13.186 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/products - 200 null application/json; charset=utf-8 138.6889ms
+2026-06-15 13:53:13.210 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/cart/items - application/json; charset=utf-8 72
+2026-06-15 13:53:13.214 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.CartController.AddItem (Thetatch.API)'
+2026-06-15 13:53:13.219 +03:00 [INF] Route matched with {action = "AddItem", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Cart.CartResponse]] AddItem(Thetatch.Application.DTOs.Cart.AddCartItemRequest) on controller Thetatch.API.Controllers.CartController (Thetatch.API).
+2026-06-15 13:53:13.304 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:13.396 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:13.404 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Cart.CartResponse'.
+2026-06-15 13:53:13.409 +03:00 [INF] Executed action Thetatch.API.Controllers.CartController.AddItem (Thetatch.API) in 190.0422ms
+2026-06-15 13:53:13.409 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.CartController.AddItem (Thetatch.API)'
+2026-06-15 13:53:13.409 +03:00 [INF] HTTP POST /api/v1/cart/items responded 200 in 198.3607 ms
+2026-06-15 13:53:13.410 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/v1/cart/items - 200 null application/json; charset=utf-8 199.5326ms
+2026-06-15 13:53:13.416 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/orders - application/json; charset=utf-8 176
+2026-06-15 13:53:13.417 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API)'
+2026-06-15 13:53:13.423 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] CreateOrder(Thetatch.Application.DTOs.Orders.CreateOrderRequest, System.String) on controller Thetatch.API.Controllers.OrdersController (Thetatch.API).
+2026-06-15 13:53:13.679 +03:00 [INF] Saved 3 entities to in-memory store.
+2026-06-15 13:53:13.714 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:13.745 +03:00 [INF] Executed action Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API) in 322.0423ms
+2026-06-15 13:53:13.745 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API)'
+2026-06-15 13:53:13.745 +03:00 [INF] HTTP POST /api/v1/orders responded 201 in 328.6661 ms
+2026-06-15 13:53:13.746 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/v1/orders - 201 null application/json; charset=utf-8 329.1755ms
+2026-06-15 13:53:13.754 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/orders - null null
+2026-06-15 13:53:13.755 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.OrdersController.GetOrders (Thetatch.API)'
+2026-06-15 13:53:13.760 +03:00 [INF] Route matched with {action = "GetOrders", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Thetatch.Application.DTOs.Orders.OrderSummaryResponse]]] GetOrders() on controller Thetatch.API.Controllers.OrdersController (Thetatch.API).
+2026-06-15 13:53:13.788 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Thetatch.Application.DTOs.Orders.OrderSummaryResponse, Thetatch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-15 13:53:13.792 +03:00 [INF] Executed action Thetatch.API.Controllers.OrdersController.GetOrders (Thetatch.API) in 31.5387ms
+2026-06-15 13:53:13.792 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.OrdersController.GetOrders (Thetatch.API)'
+2026-06-15 13:53:13.792 +03:00 [INF] HTTP GET /api/v1/orders responded 200 in 37.7577 ms
+2026-06-15 13:53:13.792 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/orders - 200 null application/json; charset=utf-8 38.3445ms
+2026-06-15 13:53:13.801 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 158
+2026-06-15 13:53:13.802 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:13.802 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Thetatch.Application.DTOs.Auth.RegisterRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:13.900 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:13.902 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:13.902 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-15 13:53:13.903 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Register (Thetatch.API) in 101.3799ms
+2026-06-15 13:53:13.903 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:13.904 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 102.1432 ms
+2026-06-15 13:53:13.904 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 102.7576ms
+2026-06-15 13:53:13.905 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 85
+2026-06-15 13:53:13.905 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:13.905 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Thetatch.Application.DTOs.Auth.LoginRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:14.007 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:14.008 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:14.008 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Login (Thetatch.API) in 102.6921ms
+2026-06-15 13:53:14.008 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:14.008 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 103.4683 ms
+2026-06-15 13:53:14.009 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 200 null application/json; charset=utf-8 103.9235ms
+2026-06-15 13:53:14.009 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/products - null null
+2026-06-15 13:53:14.010 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:14.010 +03:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.SharedKernel.PagedResult`1[Thetatch.Application.DTOs.Products.ProductResponse]]] GetProducts(System.String, System.String, System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal], System.String, Int32, Int32) on controller Thetatch.API.Controllers.ProductsController (Thetatch.API).
+2026-06-15 13:53:14.012 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.SharedKernel.PagedResult`1[[Thetatch.Application.DTOs.Products.ProductResponse, Thetatch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-15 13:53:14.012 +03:00 [INF] Executed action Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API) in 2.0272ms
+2026-06-15 13:53:14.012 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:14.012 +03:00 [INF] HTTP GET /api/v1/products responded 200 in 2.6479 ms
+2026-06-15 13:53:14.012 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/products - 200 null application/json; charset=utf-8 2.921ms
+2026-06-15 13:53:14.027 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/cart/items - application/json; charset=utf-8 72
+2026-06-15 13:53:14.028 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.CartController.AddItem (Thetatch.API)'
+2026-06-15 13:53:14.028 +03:00 [INF] Route matched with {action = "AddItem", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Cart.CartResponse]] AddItem(Thetatch.Application.DTOs.Cart.AddCartItemRequest) on controller Thetatch.API.Controllers.CartController (Thetatch.API).
+2026-06-15 13:53:14.031 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:14.032 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:14.033 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Cart.CartResponse'.
+2026-06-15 13:53:14.033 +03:00 [INF] Executed action Thetatch.API.Controllers.CartController.AddItem (Thetatch.API) in 5.418ms
+2026-06-15 13:53:14.034 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.CartController.AddItem (Thetatch.API)'
+2026-06-15 13:53:14.034 +03:00 [INF] HTTP POST /api/v1/cart/items responded 200 in 6.5475 ms
+2026-06-15 13:53:14.034 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/v1/cart/items - 200 null application/json; charset=utf-8 7.0099ms
+2026-06-15 13:53:14.034 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/orders - application/json; charset=utf-8 176
+2026-06-15 13:53:14.035 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API)'
+2026-06-15 13:53:14.035 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] CreateOrder(Thetatch.Application.DTOs.Orders.CreateOrderRequest, System.String) on controller Thetatch.API.Controllers.OrdersController (Thetatch.API).
+2026-06-15 13:53:14.040 +03:00 [INF] Saved 3 entities to in-memory store.
+2026-06-15 13:53:14.041 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:14.042 +03:00 [INF] Executed action Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API) in 6.862ms
+2026-06-15 13:53:14.042 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API)'
+2026-06-15 13:53:14.042 +03:00 [INF] HTTP POST /api/v1/orders responded 201 in 7.7629 ms
+2026-06-15 13:53:14.042 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/v1/orders - 201 null application/json; charset=utf-8 8.075ms
+2026-06-15 13:53:14.043 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/orders - application/json; charset=utf-8 176
+2026-06-15 13:53:14.044 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API)'
+2026-06-15 13:53:14.044 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] CreateOrder(Thetatch.Application.DTOs.Orders.CreateOrderRequest, System.String) on controller Thetatch.API.Controllers.OrdersController (Thetatch.API).
+2026-06-15 13:53:14.051 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:14.051 +03:00 [INF] Executed action Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API) in 7.365ms
+2026-06-15 13:53:14.051 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API)'
+2026-06-15 13:53:14.052 +03:00 [INF] HTTP POST /api/v1/orders responded 201 in 8.5454 ms
+2026-06-15 13:53:14.052 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/v1/orders - 201 null application/json; charset=utf-8 9.0307ms
+2026-06-15 13:53:14.062 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/cart - null null
+2026-06-15 13:53:14.063 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.CartController.GetCart (Thetatch.API)'
+2026-06-15 13:53:14.066 +03:00 [INF] Route matched with {action = "GetCart", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Cart.CartResponse]] GetCart() on controller Thetatch.API.Controllers.CartController (Thetatch.API).
+2026-06-15 13:53:14.068 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Cart.CartResponse'.
+2026-06-15 13:53:14.069 +03:00 [INF] Executed action Thetatch.API.Controllers.CartController.GetCart (Thetatch.API) in 2.5804ms
+2026-06-15 13:53:14.069 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.CartController.GetCart (Thetatch.API)'
+2026-06-15 13:53:14.069 +03:00 [INF] HTTP GET /api/v1/cart responded 200 in 6.9199 ms
+2026-06-15 13:53:14.069 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/cart - 200 null application/json; charset=utf-8 7.3505ms
+2026-06-15 13:53:14.074 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 53
+2026-06-15 13:53:14.074 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:14.075 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Thetatch.Application.DTOs.Auth.LoginRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:14.179 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:14.179 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:14.180 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Login (Thetatch.API) in 104.85ms
+2026-06-15 13:53:14.180 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:14.180 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 105.6593 ms
+2026-06-15 13:53:14.180 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 200 null application/json; charset=utf-8 106.0856ms
+2026-06-15 13:53:14.183 +03:00 [INF] Request starting HTTP/1.1 PATCH http://localhost/api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status - application/json; charset=utf-8 null
+2026-06-15 13:53:14.186 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.237 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "AdminOrders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] UpdateOrderStatus(System.Guid, Thetatch.Application.DTOs.Orders.UpdateOrderStatusRequest) on controller Thetatch.API.Controllers.AdminOrdersController (Thetatch.API).
+2026-06-15 13:53:14.304 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:14.329 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:14.330 +03:00 [INF] Executed action Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API) in 91.915ms
+2026-06-15 13:53:14.330 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.330 +03:00 [INF] HTTP PATCH /api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status responded 200 in 144.1694 ms
+2026-06-15 13:53:14.330 +03:00 [INF] Request finished HTTP/1.1 PATCH http://localhost/api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status - 200 null application/json; charset=utf-8 146.7642ms
+2026-06-15 13:53:14.331 +03:00 [INF] Request starting HTTP/1.1 PATCH http://localhost/api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status - application/json; charset=utf-8 null
+2026-06-15 13:53:14.332 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.333 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "AdminOrders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] UpdateOrderStatus(System.Guid, Thetatch.Application.DTOs.Orders.UpdateOrderStatusRequest) on controller Thetatch.API.Controllers.AdminOrdersController (Thetatch.API).
+2026-06-15 13:53:14.336 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:14.337 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:14.337 +03:00 [INF] Executed action Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API) in 4.8017ms
+2026-06-15 13:53:14.338 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.338 +03:00 [INF] HTTP PATCH /api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status responded 200 in 5.9189 ms
+2026-06-15 13:53:14.338 +03:00 [INF] Request finished HTTP/1.1 PATCH http://localhost/api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status - 200 null application/json; charset=utf-8 7.2294ms
+2026-06-15 13:53:14.338 +03:00 [INF] Request starting HTTP/1.1 PATCH http://localhost/api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status - application/json; charset=utf-8 null
+2026-06-15 13:53:14.339 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.339 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "AdminOrders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] UpdateOrderStatus(System.Guid, Thetatch.Application.DTOs.Orders.UpdateOrderStatusRequest) on controller Thetatch.API.Controllers.AdminOrdersController (Thetatch.API).
+2026-06-15 13:53:14.355 +03:00 [INF] Saved 3 entities to in-memory store.
+2026-06-15 13:53:14.356 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:14.356 +03:00 [INF] Executed action Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API) in 16.9798ms
+2026-06-15 13:53:14.357 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.357 +03:00 [INF] HTTP PATCH /api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status responded 200 in 18.0500 ms
+2026-06-15 13:53:14.357 +03:00 [INF] Request finished HTTP/1.1 PATCH http://localhost/api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status - 200 null application/json; charset=utf-8 18.435ms
+2026-06-15 13:53:14.363 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/orders/31b7c160-a909-4881-bc23-d640641c6fb6 - null null
+2026-06-15 13:53:14.363 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.OrdersController.GetOrder (Thetatch.API)'
+2026-06-15 13:53:14.368 +03:00 [INF] Route matched with {action = "GetOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] GetOrder(System.Guid) on controller Thetatch.API.Controllers.OrdersController (Thetatch.API).
+2026-06-15 13:53:14.371 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:14.372 +03:00 [INF] Executed action Thetatch.API.Controllers.OrdersController.GetOrder (Thetatch.API) in 3.3382ms
+2026-06-15 13:53:14.372 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.OrdersController.GetOrder (Thetatch.API)'
+2026-06-15 13:53:14.372 +03:00 [INF] HTTP GET /api/v1/orders/31b7c160-a909-4881-bc23-d640641c6fb6 responded 200 in 9.0172 ms
+2026-06-15 13:53:14.372 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/orders/31b7c160-a909-4881-bc23-d640641c6fb6 - 200 null application/json; charset=utf-8 9.4788ms
+2026-06-15 13:53:14.373 +03:00 [INF] Request starting HTTP/1.1 PATCH http://localhost/api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status - application/json; charset=utf-8 null
+2026-06-15 13:53:14.374 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.374 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "AdminOrders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] UpdateOrderStatus(System.Guid, Thetatch.Application.DTOs.Orders.UpdateOrderStatusRequest) on controller Thetatch.API.Controllers.AdminOrdersController (Thetatch.API).
+2026-06-15 13:53:14.379 +03:00 [INF] Saved 3 entities to in-memory store.
+2026-06-15 13:53:14.381 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:14.381 +03:00 [INF] Executed action Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API) in 7.0781ms
+2026-06-15 13:53:14.381 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.381 +03:00 [INF] HTTP PATCH /api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status responded 200 in 8.0935 ms
+2026-06-15 13:53:14.382 +03:00 [INF] Request finished HTTP/1.1 PATCH http://localhost/api/adminorders/31b7c160-a909-4881-bc23-d640641c6fb6/status - 200 null application/json; charset=utf-8 8.6627ms
+2026-06-15 13:53:14.384 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/orders/31b7c160-a909-4881-bc23-d640641c6fb6 - null null
+2026-06-15 13:53:14.385 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.OrdersController.GetOrder (Thetatch.API)'
+2026-06-15 13:53:14.385 +03:00 [INF] Route matched with {action = "GetOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] GetOrder(System.Guid) on controller Thetatch.API.Controllers.OrdersController (Thetatch.API).
+2026-06-15 13:53:14.387 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:14.387 +03:00 [INF] Executed action Thetatch.API.Controllers.OrdersController.GetOrder (Thetatch.API) in 2.1097ms
+2026-06-15 13:53:14.387 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.OrdersController.GetOrder (Thetatch.API)'
+2026-06-15 13:53:14.387 +03:00 [INF] HTTP GET /api/v1/orders/31b7c160-a909-4881-bc23-d640641c6fb6 responded 200 in 3.2066 ms
+2026-06-15 13:53:14.388 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/orders/31b7c160-a909-4881-bc23-d640641c6fb6 - 200 null application/json; charset=utf-8 3.6243ms
+2026-06-15 13:53:14.391 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/register - application/json; charset=utf-8 158
+2026-06-15 13:53:14.392 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:14.392 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Thetatch.Application.DTOs.Auth.RegisterRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:14.498 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:14.499 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:14.500 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-15 13:53:14.500 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Register (Thetatch.API) in 107.8093ms
+2026-06-15 13:53:14.500 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Register (Thetatch.API)'
+2026-06-15 13:53:14.500 +03:00 [INF] HTTP POST /api/auth/register responded 200 in 108.6562 ms
+2026-06-15 13:53:14.501 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/register - 200 null application/json; charset=utf-8 109.2454ms
+2026-06-15 13:53:14.501 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 85
+2026-06-15 13:53:14.502 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:14.502 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Thetatch.Application.DTOs.Auth.LoginRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:14.681 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:14.682 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:14.682 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Login (Thetatch.API) in 180.0371ms
+2026-06-15 13:53:14.682 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:14.682 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 180.7454 ms
+2026-06-15 13:53:14.682 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 200 null application/json; charset=utf-8 181.1571ms
+2026-06-15 13:53:14.684 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/products - null null
+2026-06-15 13:53:14.684 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:14.685 +03:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.SharedKernel.PagedResult`1[Thetatch.Application.DTOs.Products.ProductResponse]]] GetProducts(System.String, System.String, System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal], System.String, Int32, Int32) on controller Thetatch.API.Controllers.ProductsController (Thetatch.API).
+2026-06-15 13:53:14.688 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.SharedKernel.PagedResult`1[[Thetatch.Application.DTOs.Products.ProductResponse, Thetatch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-15 13:53:14.688 +03:00 [INF] Executed action Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API) in 3.6758ms
+2026-06-15 13:53:14.689 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:14.689 +03:00 [INF] HTTP GET /api/v1/products responded 200 in 4.5045 ms
+2026-06-15 13:53:14.689 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/products - 200 null application/json; charset=utf-8 4.9416ms
+2026-06-15 13:53:14.690 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/cart/items - application/json; charset=utf-8 72
+2026-06-15 13:53:14.691 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.CartController.AddItem (Thetatch.API)'
+2026-06-15 13:53:14.692 +03:00 [INF] Route matched with {action = "AddItem", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Cart.CartResponse]] AddItem(Thetatch.Application.DTOs.Cart.AddCartItemRequest) on controller Thetatch.API.Controllers.CartController (Thetatch.API).
+2026-06-15 13:53:14.695 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:14.696 +03:00 [INF] Saved 2 entities to in-memory store.
+2026-06-15 13:53:14.697 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Cart.CartResponse'.
+2026-06-15 13:53:14.697 +03:00 [INF] Executed action Thetatch.API.Controllers.CartController.AddItem (Thetatch.API) in 5.2482ms
+2026-06-15 13:53:14.697 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.CartController.AddItem (Thetatch.API)'
+2026-06-15 13:53:14.697 +03:00 [INF] HTTP POST /api/v1/cart/items responded 200 in 6.3281 ms
+2026-06-15 13:53:14.697 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/v1/cart/items - 200 null application/json; charset=utf-8 6.7299ms
+2026-06-15 13:53:14.698 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/v1/orders - application/json; charset=utf-8 176
+2026-06-15 13:53:14.698 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API)'
+2026-06-15 13:53:14.699 +03:00 [INF] Route matched with {action = "CreateOrder", controller = "Orders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] CreateOrder(Thetatch.Application.DTOs.Orders.CreateOrderRequest, System.String) on controller Thetatch.API.Controllers.OrdersController (Thetatch.API).
+2026-06-15 13:53:14.702 +03:00 [INF] Saved 3 entities to in-memory store.
+2026-06-15 13:53:14.703 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Thetatch.Application.DTOs.Orders.OrderResponse'.
+2026-06-15 13:53:14.703 +03:00 [INF] Executed action Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API) in 4.7162ms
+2026-06-15 13:53:14.703 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.OrdersController.CreateOrder (Thetatch.API)'
+2026-06-15 13:53:14.704 +03:00 [INF] HTTP POST /api/v1/orders responded 201 in 5.7143 ms
+2026-06-15 13:53:14.704 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/v1/orders - 201 null application/json; charset=utf-8 6.0695ms
+2026-06-15 13:53:14.704 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost/api/auth/login - application/json; charset=utf-8 53
+2026-06-15 13:53:14.705 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:14.705 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Thetatch.Application.DTOs.Auth.LoginRequest) on controller Thetatch.API.Controllers.AuthController (Thetatch.API).
+2026-06-15 13:53:14.809 +03:00 [INF] Saved 1 entities to in-memory store.
+2026-06-15 13:53:14.810 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.Application.DTOs.Auth.AuthResponse'.
+2026-06-15 13:53:14.810 +03:00 [INF] Executed action Thetatch.API.Controllers.AuthController.Login (Thetatch.API) in 105.1721ms
+2026-06-15 13:53:14.810 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AuthController.Login (Thetatch.API)'
+2026-06-15 13:53:14.810 +03:00 [INF] HTTP POST /api/auth/login responded 200 in 105.8981 ms
+2026-06-15 13:53:14.811 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost/api/auth/login - 200 null application/json; charset=utf-8 106.2291ms
+2026-06-15 13:53:14.811 +03:00 [INF] Request starting HTTP/1.1 PATCH http://localhost/api/adminorders/944aaeea-0dc4-4579-9e76-15a00ad65571/status - application/json; charset=utf-8 null
+2026-06-15 13:53:14.812 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.812 +03:00 [INF] Route matched with {action = "UpdateOrderStatus", controller = "AdminOrders"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.Application.DTOs.Orders.OrderResponse]] UpdateOrderStatus(System.Guid, Thetatch.Application.DTOs.Orders.UpdateOrderStatusRequest) on controller Thetatch.API.Controllers.AdminOrdersController (Thetatch.API).
+2026-06-15 13:53:14.816 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-06-15 13:53:14.817 +03:00 [INF] Executed action Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API) in 5.3571ms
+2026-06-15 13:53:14.817 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.AdminOrdersController.UpdateOrderStatus (Thetatch.API)'
+2026-06-15 13:53:14.818 +03:00 [INF] HTTP PATCH /api/adminorders/944aaeea-0dc4-4579-9e76-15a00ad65571/status responded 400 in 6.5091 ms
+2026-06-15 13:53:14.818 +03:00 [INF] Request finished HTTP/1.1 PATCH http://localhost/api/adminorders/944aaeea-0dc4-4579-9e76-15a00ad65571/status - 400 null text/plain; charset=utf-8 6.8919ms
+2026-06-15 13:53:14.821 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/products - null null
+2026-06-15 13:53:14.822 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:14.822 +03:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.SharedKernel.PagedResult`1[Thetatch.Application.DTOs.Products.ProductResponse]]] GetProducts(System.String, System.String, System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal], System.String, Int32, Int32) on controller Thetatch.API.Controllers.ProductsController (Thetatch.API).
+2026-06-15 13:53:14.824 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.SharedKernel.PagedResult`1[[Thetatch.Application.DTOs.Products.ProductResponse, Thetatch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-15 13:53:14.825 +03:00 [INF] Executed action Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API) in 3.1402ms
+2026-06-15 13:53:14.825 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:14.825 +03:00 [INF] HTTP GET /api/v1/products responded 200 in 4.0292 ms
+2026-06-15 13:53:14.826 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/products - 200 null application/json; charset=utf-8 4.4664ms
+2026-06-15 13:53:14.831 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/products - null null
+2026-06-15 13:53:14.831 +03:00 [INF] Executing endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:14.832 +03:00 [INF] Route matched with {action = "GetProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Thetatch.SharedKernel.PagedResult`1[Thetatch.Application.DTOs.Products.ProductResponse]]] GetProducts(System.String, System.String, System.Nullable`1[System.Decimal], System.Nullable`1[System.Decimal], System.String, Int32, Int32) on controller Thetatch.API.Controllers.ProductsController (Thetatch.API).
+2026-06-15 13:53:14.834 +03:00 [INF] Executing OkObjectResult, writing value of type 'Thetatch.SharedKernel.PagedResult`1[[Thetatch.Application.DTOs.Products.ProductResponse, Thetatch.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-15 13:53:14.834 +03:00 [INF] Executed action Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API) in 2.6415ms
+2026-06-15 13:53:14.834 +03:00 [INF] Executed endpoint 'Thetatch.API.Controllers.ProductsController.GetProducts (Thetatch.API)'
+2026-06-15 13:53:14.835 +03:00 [INF] HTTP GET /api/v1/products responded 200 in 3.3390 ms
+2026-06-15 13:53:14.835 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/products - 200 null application/json; charset=utf-8 3.7615ms

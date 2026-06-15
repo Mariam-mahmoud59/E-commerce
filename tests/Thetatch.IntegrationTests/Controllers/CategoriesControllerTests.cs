@@ -25,7 +25,8 @@ public class CategoriesControllerTests
         
         // Assert
         response.EnsureSuccessStatusCode();
-        var categories = await response.Content.ReadFromJsonAsync<List<CategoryResponse>>();
+        var result = await response.Content.ReadFromJsonAsync<Thetatch.SharedKernel.PagedResult<CategoryResponse>>();
+        var categories = result?.Items;
         
         Assert.NotNull(categories);
         Assert.NotEmpty(categories);
@@ -44,7 +45,8 @@ public class CategoriesControllerTests
         
         // Assert
         response.EnsureSuccessStatusCode();
-        var categories = await response.Content.ReadFromJsonAsync<List<CategoryResponse>>();
+        var result = await response.Content.ReadFromJsonAsync<Thetatch.SharedKernel.PagedResult<CategoryResponse>>();
+        var categories = result?.Items;
         
         Assert.NotNull(categories);
         Assert.NotEmpty(categories);

@@ -19,16 +19,24 @@ public class CategoriesController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<CategoryResponse>>> GetCategories()
+    public async Task<ActionResult<Thetatch.SharedKernel.PagedResult<CategoryResponse>>> GetCategories(
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20)
     {
         var language = _languageService.Language;
 
-        var categories = await _context.Categories
+        var query = _context.Categories
             .Where(c => c.IsActive)
-            .OrderBy(c => c.SortOrder)
+            .OrderBy(c => c.SortOrder);
+
+        var totalCount = await query.CountAsync();
+
+        var categories = await query
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
             .ToListAsync();
 
-        var response = categories.Select(c => new CategoryResponse
+        var items = categories.Select(c => new CategoryResponse
         {
             Id = c.Id,
             Slug = c.Slug,
@@ -38,6 +46,12 @@ public class CategoriesController : ControllerBase
             SortOrder = c.SortOrder
         }).ToList();
 
-        return Ok(response);
+        return Ok(new Thetatch.SharedKernel.PagedResult<CategoryResponse>
+        {
+            Items = items,
+            TotalCount = totalCount,
+            Page = page,
+            PageSize = pageSize
+        });
     }
 }

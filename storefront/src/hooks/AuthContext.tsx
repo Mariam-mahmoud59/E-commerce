@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 import type { AuthResponse, LoginRequest, RegisterRequest } from '../types/auth';
 import { authApi } from '../api/auth';
+import { setAccessToken } from '../api/client';
 
 interface AuthContextType {
   user: AuthResponse | null;
@@ -23,6 +24,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       try {
         const response = await authApi.refresh();
         if (response.token) {
+          setAccessToken(response.token);
           setUser(response);
         }
       } catch (error) {
@@ -37,12 +39,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = async (data: LoginRequest) => {
     const response = await authApi.login(data);
+    setAccessToken(response.token);
     setUser(response);
   };
 
   const register = async (data: RegisterRequest) => {
-    const response = await authApi.register(data);
-    setUser(response);
+    await authApi.register(data);
+    await login({ email: data.email, password: data.password });
   };
 
   const logout = async () => {
@@ -51,6 +54,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         await authApi.logout(user.token);
       }
     } finally {
+      setAccessToken(null);
       setUser(null);
     }
   };
