@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { CartProvider } from './hooks/useCart';
 import { AuthProvider } from './hooks/AuthContext';
 import { Navbar } from './components/Navbar/Navbar';
+import { CartDrawer } from './components/CartDrawer/CartDrawer';
 import { HomePage } from './pages/HomePage';
 import { ShopPage } from './pages/ShopPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
@@ -18,6 +19,7 @@ export default function App() {
     <AuthProvider>
       <CartProvider>
         <Navbar />
+        <CartDrawer />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />

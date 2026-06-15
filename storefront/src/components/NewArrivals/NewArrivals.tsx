@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { Background3D } from '../Background3D/Background3D';
 import './NewArrivals.css';
 
@@ -13,6 +14,7 @@ const PRODUCTS = [
 const TiltCard = ({ product }: { product: any }) => {
   const [style, setStyle] = useState<React.CSSProperties>({ transition: 'transform 0.5s ease-out' });
   const cardRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!cardRef.current) return;
@@ -44,7 +46,8 @@ const TiltCard = ({ product }: { product: any }) => {
       className="tilt-card"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{ ...style, transformStyle: 'preserve-3d' }}
+      onClick={() => navigate(`/product/${product.id}`)}
+      style={{ ...style, transformStyle: 'preserve-3d', cursor: 'pointer' }}
     >
       <div className="tilt-card__image-container">
         <img
@@ -59,7 +62,13 @@ const TiltCard = ({ product }: { product: any }) => {
           </div>
         )}
 
-        <button className="tilt-card__button">
+        <button 
+          className="tilt-card__button"
+          onClick={(e) => {
+            e.stopPropagation();
+            // Optional: Handle add to cart logic here later
+          }}
+        >
           Add to Cart
         </button>
       </div>

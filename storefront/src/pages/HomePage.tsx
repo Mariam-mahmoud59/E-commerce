@@ -13,7 +13,7 @@ import './HomePage.css';
 const CARDS = [
   { id: 1, image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop' },
   { id: 2, image: 'https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=800&auto=format&fit=crop' },
-  { id: 3, image: 'https://images.unsplash.com/photo-1493225457124-a1a2a5956093?q=80&w=800&auto=format&fit=crop' },
+  { id: 3, image: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800&auto=format&fit=crop' },
   { id: 4, image: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=800&auto=format&fit=crop' },
 ];
 
