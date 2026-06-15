@@ -5,9 +5,9 @@ import { Background3D } from '../Background3D/Background3D';
 import './NewArrivals.css';
 
 const PRODUCTS = [
-  { id: 1, name: 'Neon Void Jacket', price: '$240', tag: 'New', image: 'https://images.unsplash.com/photo-1550614000-4b95d466bcbe?q=80&w=600&auto=format&fit=crop' },
+  { id: 1, name: 'Neon Void Jacket', price: '$240', tag: 'New', image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600&auto=format&fit=crop' },
   { id: 2, name: 'Cybernetic Boots', price: '$310', tag: 'Best Seller', image: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=600&auto=format&fit=crop' },
-  { id: 3, name: 'Holo-Weave Pants', price: '$180', tag: 'Limited', image: 'https://images.unsplash.com/photo-1579730590815-56f4d2f09ba9?q=80&w=600&auto=format&fit=crop' },
+  { id: 3, name: 'Holo-Weave Pants', price: '$180', tag: 'Limited', image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop' },
   { id: 4, name: 'Flux Core Hoodie', price: '$150', tag: 'Drop 02', image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=600&auto=format&fit=crop' },
 ];
 

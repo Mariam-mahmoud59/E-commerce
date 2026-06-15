@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/AuthContext';
 import { adminApi } from '../api/adminApi';
 import './DashboardPage.css';
 import { Package, ShoppingBag, TrendingUp, Users } from 'lucide-react';
 
 export function DashboardPage() {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<'orders' | 'products'>('orders');
   
   const [orders, setOrders] = useState<any[]>([]);
@@ -88,7 +90,19 @@ export function DashboardPage() {
   return (
     <div className="dashboard page-enter">
       <div className="dashboard__inner">
-        <h1 className="dashboard__title">Control Panel</h1>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+          <h1 className="dashboard__title" style={{ marginBottom: 0 }}>Control Panel</h1>
+          <button 
+            className="btn" 
+            style={{ padding: '8px 16px', background: 'transparent', border: '1px solid var(--glass-border)', color: 'var(--light-text)', cursor: 'pointer' }}
+            onClick={async () => {
+              await logout();
+              navigate('/login');
+            }}
+          >
+            Sign Out
+          </button>
+        </div>
         
         {/* Mock Stats Section to make the dashboard look professional */}
         <div className="dashboard__stats">

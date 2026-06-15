@@ -69,7 +69,7 @@ export function Navbar() {
       if (isAdmin) {
         links.push({ path: '/dashboard', key: 'nav.dashboard', defaultText: 'Dashboard' });
       }
-      if (isAuthenticated) {
+      if (isAuthenticated && !isAdmin) {
         links.push({ path: '/profile', key: 'nav.profile', defaultText: 'Profile' });
       }
       return links;
@@ -82,7 +82,7 @@ export function Navbar() {
       if (isAdmin) {
         links.push({ path: '/dashboard', key: 'nav.dashboard', defaultText: 'Dashboard' });
       }
-      if (isAuthenticated) {
+      if (isAuthenticated && !isAdmin) {
         links.push({ path: '/profile', key: 'nav.profile', defaultText: 'Profile' });
       }
       return links;
