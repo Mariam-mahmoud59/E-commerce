@@ -1,6 +1,6 @@
 import i18n from '../i18n';
 
-export const API_BASE_URL = 'http://localhost:5191/api';
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5191/api';
 
 // Maintain a reference to the access token in memory
 let accessToken: string | null = null;
