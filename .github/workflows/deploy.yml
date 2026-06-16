@@ -26,7 +26,7 @@ jobs:
 
       - name: Build project
         working-directory: ./storefront
-        run: npm run build
+        run: npm run deploy
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
