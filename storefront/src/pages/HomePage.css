@@ -20,8 +20,8 @@
 
 .hero-3d-scene {
   position: relative;
-  width: 280px;
-  height: 380px;
+  width: 240px;
+  height: 340px;
   transform-style: preserve-3d;
 }
 
@@ -136,7 +136,7 @@
 
 .hero__title {
   font-family: var(--font-heading);
-  font-size: clamp(48px, 6vw, 84px);
+  font-size: clamp(36px, 8vw, 84px);
   font-weight: 900;
   line-height: 1.05;
   color: var(--light-text);
@@ -581,7 +581,10 @@
 @media (max-width: 1024px) {
   .hero__grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 20px;
+  }
+  .hero__container {
+    padding-top: 60px;
   }
 
   .hero__text-content {
@@ -606,8 +609,8 @@
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding-top: 100px;
+  .hero__container {
+    padding-top: 80px;
   }
 
   .collections__grid {

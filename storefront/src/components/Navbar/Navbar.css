@@ -184,4 +184,7 @@
 @media (max-width: 768px) {
   .navbar__links, .navbar__auth-buttons { display: none; }
   .navbar__mobile-toggle { display: flex; }
+  .navbar__brand { font-size: 15px; line-height: 1.2; }
+  .navbar__inner { height: auto; min-height: 68px; padding: 10px 0; }
+  .navbar { padding: 0 16px; }
 }
